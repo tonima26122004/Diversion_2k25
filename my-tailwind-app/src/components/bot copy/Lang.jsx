@@ -2,11 +2,31 @@ import React, { useState } from 'react';
 
 const LanguageDropdown = () => {
   const languages = [
-    'Assamese', 'Bengali', 'Bodo', 'Dogri', 'Gujarati', 'Hindi', 'Kannada',
-    'Kashmiri', 'Konkani', 'Maithili', 'Malayalam', 'Manipuri', 'Marathi',
-    'Nepali', 'Odia', 'Punjabi', 'Sanskrit', 'Santali', 'Sindhi', 'Tamil',
-    'Telugu', 'Urdu',
-  ];
+    'English',   // English (already in English)
+    'অসমীয়া',   // Assamese
+    'বাংলা',     // Bengali
+    'बोड़ो',      // Bodo
+    'डोगरी',      // Dogri
+    'ગુજરાતી',    // Gujarati
+    'हिन्दी',     // Hindi
+    'ಕನ್ನಡ',     // Kannada
+    'कश्मीरी',    // Kashmiri
+    'कोंकणी',     // Konkani
+    'मैथिली',    // Maithili
+    'മലയാളം',    // Malayalam
+    'মণিপুরি',   // Manipuri
+    'मराठी',     // Marathi
+    'नेपाली',    // Nepali
+    'ଓଡିଆ',     // Odia
+    'ਪੰਜਾਬੀ',     // Punjabi
+    'संस्कृत',    // Sanskrit
+    'সান্তালি',   // Santali
+    'सिन्धी',    // Sindhi
+    'தமிழ்',     // Tamil
+    'తెలుగు',    // Telugu
+    'اردو',      // Urdu
+];
+
 
   const [selectedLanguage, setSelectedLanguage] = useState('Lang: English');
   const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +34,8 @@ const LanguageDropdown = () => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleSelect = (language) => {
-    setSelectedLanguage(`Lang: ${language}`); // Update the language with the new selection
-    setIsOpen(false); // Close dropdown after selection
+    setSelectedLanguage(`Lang: ${language}`); 
+    setIsOpen(false); 
   };
 
   return (
@@ -23,7 +43,7 @@ const LanguageDropdown = () => {
       {/* Dropdown Button */}
       <button
         onClick={toggleDropdown}
-        className="flex items-center justify-between px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-100 w-60"
+        className="flex items-center justify-between px-4 py-2 border-2 border-black rounded-md shadow-sm bg-transparent w-60"
       >
         <span className="mr-2">{selectedLanguage}</span> {/* Adjusted margin */}
         <svg
@@ -42,18 +62,22 @@ const LanguageDropdown = () => {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute mt-2 w-60 bg-white shadow-lg max-h-60 overflow-auto border border-gray-200 rounded-md z-10">
-          {languages.map((language, index) => (
-            <div
-              key={index}
-              onClick={() => handleSelect(language)}
-              className="px-4 py-2 cursor-pointer hover:bg-gray-100"
-            >
-              {language}
-            </div>
-          ))}
+    <div className="absolute mt-2 w-60 bg-transparent shadow-lg max-h-60 overflow-auto border border-gray-200 rounded-md z-10">
+        <div className="custom-scrollbar ">
+            {languages.map((language, index) => (
+                <div
+                    key={index}
+                    onClick={() => handleSelect(language)}
+                    className="px-4 py-2 cursor-pointer hover:bg-gray-100 border-b border-gray-300"
+                >
+                    {language}
+                </div>
+            ))}
         </div>
-      )}
+    </div>
+)}
+
+
     </div>
   );
 };
