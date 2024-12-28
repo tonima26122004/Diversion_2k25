@@ -73,7 +73,7 @@ const AnimatedInputBox = ({ addQuery }) => {
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder="What are the legal consequences of violating traffic rules?"
-                className="px-4 py-2 border-2 bg-transparent outline-0 border-[#766C40] rounded-md w-full  pr-36"
+                className="px-4 py-2 border-2 font-libra bg-transparent outline-0 border-[#766C40] rounded-md w-full  pr-36"
             />
 
             <div className="absolute inset-y-0 right-0 flex items-center gap-4">
