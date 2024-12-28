@@ -6,7 +6,7 @@ const Nav = () => {
   const [activeButton, setActiveButton] = useState(null);
 
   const navItems = [
-    { src: "logo.svg", alt: "Logo", route: "/" },
+    { src: "logo_1.svg", alt: "Logo", route: "/" },
     { src: "hub.svg", alt: "Hub", route: "/hub" },
     { src: "bot.svg", alt: "Bot", route: "/Chat" },
     { src: "quiz.svg", alt: "Quiz", route: "/quiz" },
@@ -26,7 +26,7 @@ const Nav = () => {
             navigate(item.route);
           }}
         >
-          <img className="w-28" src={item.src} alt={item.alt} />
+          <img className="w-24" src={item.src} alt={item.alt} />
         </button>
       ))}
     </div>
