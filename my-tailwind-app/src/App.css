@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-scrollbar{
-    background-color: transparent;
+
+
+/* Importing the Google font */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+*{
+    @apply font-cp;
 }
