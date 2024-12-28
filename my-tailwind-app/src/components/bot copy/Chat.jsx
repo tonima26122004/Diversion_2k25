@@ -42,12 +42,12 @@ const Chat = () => {
                     {/* Top Section - Main Heading */}
                     <div className="flex">
                         <div className="flex flex-col w-full gap-2 py-4">
-                            <h1 className="text-4xl font-semibold px-4">
+                            <h1 className="text-4xl font-libra font-semibold px-4">
                                 {currentQuery
                                     ? `Your query about ${currentQuery}`
                                     : 'Ask your query about'}
                             </h1>
-                            <h1 className="text-xl px-4 text-[#52524D] ">
+                            <h1 className="text-xl font-libra px-4 text-[#52524D] ">
                                 Submit your query on issues, rules, or laws for guidance
                             </h1>
                             <div className="border-[#766C40] border-2 w-1/2"></div>
@@ -66,8 +66,8 @@ const Chat = () => {
                             className={`flex items-center rounded-md p-2 ml-3 font-semibold gap-2 transition-all duration-300
                                 ${
                                     isSidebarOpen
-                                        ? 'text-[#65090A] border-2 rounded-md text-xl border-[#65090A]'
-                                        : 'text-black border-2 rounded-md text-xl border-black'
+                                        ? 'text-[#65090A] border-2 font-libra rounded-md text-xl border-[#65090A]'
+                                        : 'text-black border-2 font-libra rounded-md text-xl border-black'
                                 }`}
                             onClick={toggleSidebar}
                         >
@@ -82,12 +82,12 @@ const Chat = () => {
                             isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
                         }`}
                     >
-                        <h2 className="text-xl text-white font-semibold p-4 ">Previous Queries</h2>
+                        <h2 className="text-xl text-white font-libra font-semibold p-4 ">Previous Queries</h2>
                         <ul className="p-4 space-y-2">
                             {queries.map((query, index) => (
                                 <li
                                     key={index}
-                                    className="p-2 rounded-md cursor-pointer transition-all duration-300 text-white hover:bg-[#E4E2D6A3]"
+                                    className="p-2 rounded-md font-libra cursor-pointer transition-all duration-300 text-white hover:bg-[#E4E2D6A3]"
                                 >
                                     {query}
                                 </li>
@@ -95,7 +95,7 @@ const Chat = () => {
                         </ul>
                         <div className="absolute bottom-4 left-0 w-full px-4 flex justify-center">
                             <button
-                                className="text-xl flex items-center justify-center gap-4 w-[80%] border-2 border-[#E4E2D6] text-[#E4E2D6] py-2 rounded-md shadow-md font-semibold"
+                                className="text-xl font-libra flex items-center justify-center gap-4 w-[80%] border-2 border-[#E4E2D6] text-[#E4E2D6] py-2 rounded-md shadow-md font-semibold"
                                 onClick={handleAddNewQueryClick}
                             >
                                 <img className="w-4" src="plus.svg" alt="" />
@@ -111,7 +111,7 @@ const Chat = () => {
                         } left-1/2 transform -translate-x-1/2 z-10`}
                         >
                         {!isQuerySubmitted && (
-                            <h1 className="text-5xl font-semibold text-[#52524D]">
+                            <h1 className="text-5xl font-libra font-semibold text-[#52524D]">
                             Enter your query here.
                             </h1>
                         )}

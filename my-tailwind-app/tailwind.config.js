@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        libra:["Averia Serif Libre","serif"]
+        libra:["Crimson Pro"],
       }
     },
   },

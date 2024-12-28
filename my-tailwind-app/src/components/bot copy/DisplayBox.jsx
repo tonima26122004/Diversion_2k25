@@ -7,7 +7,7 @@ const DisplayBox = ({ queries }) => {
                 {queries.map((query, index) => (
                     <div
                         key={index}
-                        className="bg-[#9E9776] text-black font-semibold text-lg px-4 py-3 rounded-2xl text-right max-w-[30%] break-words "
+                        className="bg-[#9E9776] font-libra text-black text-lg px-4 py-3 rounded-2xl text-right max-w-[30%] break-words "
                     >
                         {query}
                     </div>
