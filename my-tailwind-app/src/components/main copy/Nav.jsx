@@ -24,7 +24,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <div className="w-full sm:w-[15%] md:w-[11%] h-full sm:h-[15%] md:h-[95%] flex flex-col items-center gap-6 sm:gap-10 relative">
+    <div className="w-[11%] h-full flex flex-col items-center gap-6 relative">
       {/* Focus box with animation */}
       <div
         className="absolute w-32 sm:w-36 h-32 sm:h-36 rounded-xl bg-[#E4E2D6A3] transition-transform duration-300"
