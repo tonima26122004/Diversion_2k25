@@ -3,6 +3,7 @@ import Nav from '../main copy/Nav';
 import LanguageDropdown from './Lang';
 import AnimatedInputBox from './Input';
 import DisplayBox from './DisplayBox';
+import axios from 'axios'
 
 const Chat = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -11,6 +12,18 @@ const Chat = () => {
     const [currentQuery, setCurrentQuery] = useState('');
     const [isQuerySubmitted, setIsQuerySubmitted] = useState(false);
     const [isInputMoved, setIsInputMoved] = useState(false);
+    const [que,setque]= useState('');
+    const [ans,setans]=useState([]);
+
+    const [Loading,setLoading]=useState(false);
+
+    const [show,setshow]=useState(false);
+
+    const [displaybutton,setdisplaybutton]=useState(false)
+    
+    const word=['Article 1','Article 2','Article 3','Article 4','Article 5','overspeeding'];
+
+    const articlewords=['Article 1','Article 2','Article 3','Article 4','Article 5'];
 
     // Toggle sidebar visibility
     const toggleSidebar = () => {
@@ -33,6 +46,74 @@ const Chat = () => {
         setIsQuerySubmitted(false); // Reset input box state
         setIsInputMoved(false); // Reset input box position
     };
+
+
+
+
+
+
+
+
+
+
+    async function getans() {
+        setLoading(true);
+        const response = await axios({
+          url: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyB2PIbL4OzhuqOoS-Agc-OL_JlUnxrw9Kg',
+          method: 'post',
+          data: {
+            "contents": [{
+              "parts": [{
+                "text": `${que}`
+              }]
+            }]
+          }
+        });
+        setans([
+          ...ans,
+          { user: que, bot: response['data']['candidates'][0]['content']['parts'][0]['text'] }
+        ]);
+        setLoading(false);
+        setque('');
+        setshow(true);
+        const headword = word.filter(n => que.includes(n));
+        // console.log(response['data']['candidates'][0]['content']['parts'][0]['text'])
+        setCurrentQuery(headword);
+        forbutton();
+        
+      }
+
+      
+
+      function forbutton(){
+        const check = articlewords.some(word => que.includes(word));
+        if(check)
+        {
+            setdisplaybutton(true);
+        }
+        else{
+            setdisplaybutton(false);
+        }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return (
         <div className="relative">
@@ -115,12 +196,12 @@ const Chat = () => {
                             Enter your query here.
                             </h1>
                         )}
-                        <AnimatedInputBox addQuery={addQuery} />
+                        <AnimatedInputBox addQuery={addQuery} getans={getans} setque={setque} que={que} setIsQuerySubmitted={setIsQuerySubmitted} setIsInputMoved={setIsInputMoved}/>
                     </div>
 
 
                     {/* Display Box Section */}
-                    <DisplayBox queries={displayedQueries} />
+                    <DisplayBox queries={displayedQueries} ans={ans} Loading={Loading} show={show}  displaybutton={displaybutton} />
                 </div>
             </div>
         </div>
