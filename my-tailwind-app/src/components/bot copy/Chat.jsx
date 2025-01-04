@@ -123,12 +123,12 @@ const Chat = () => {
                     {/* Top Section - Main Heading */}
                     <div className="flex">
                         <div className="flex flex-col w-full gap-2 py-4">
-                            <h1 className="text-4xl font-libra font-semibold px-4">
+                            <h1 className="text-4xl font-libra font-mediam px-4">
                                 {currentQuery
                                     ? `Your query about ${currentQuery}`
                                     : 'Ask your query about'}
                             </h1>
-                            <h1 className="text-xl font-libra px-4 text-[#52524D] ">
+                            <h1 className="text-xl font-libra font-normal px-4 text-[#52524D] ">
                                 Submit your query on issues, rules, or laws for guidance
                             </h1>
                             <div className="border-[#766C40] border-2 w-1/2"></div>
@@ -192,7 +192,7 @@ const Chat = () => {
                         } left-1/2 transform -translate-x-1/2 z-10`}
                         >
                         {!isQuerySubmitted && (
-                            <h1 className="text-5xl font-libra font-semibold text-[#52524D]">
+                            <h1 className="text-5xl font-libra font-medium text-[#52524D]">
                             Enter your query here.
                             </h1>
                         )}
