@@ -39,7 +39,7 @@ const LanguageDropdown = () => {
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block font-libra text-left">
       {/* Dropdown Button */}
       <button
         onClick={toggleDropdown}
@@ -62,13 +62,13 @@ const LanguageDropdown = () => {
 
       {/* Dropdown Menu */}
       {isOpen && (
-    <div className="absolute mt-2 w-60 bg-transparent shadow-lg max-h-60 overflow-auto border border-gray-200 rounded-md z-10">
+    <div className="absolute mt-2 w-60  bg-transparent shadow-lg max-h-60 overflow-auto border border-gray-200 rounded-md z-10">
         <div className="custom-scrollbar ">
             {languages.map((language, index) => (
                 <div
                     key={index}
                     onClick={() => handleSelect(language)}
-                    className="px-4 py-2 cursor-pointer hover:bg-gray-100 border-b border-gray-300"
+                    className="px-4 py-2 cursor-pointer font-libra hover:bg-gray-100 border-b border-gray-300"
                 >
                     {language}
                 </div>
