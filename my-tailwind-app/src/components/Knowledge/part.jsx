@@ -8,7 +8,7 @@ const Card = ({ number, title, onExplore }) => {
         className="w-96 h-40 bg-center bg-contain bg-no-repeat flex items-center justify-center"
         style={{ backgroundImage: "url('/diamond.svg')" }}
       >
-        <span className="text-2xl font-libra font-bold text-red-950 flex items-center pb-2">{number}</span>
+        <span className="text-2xl font-libra font-bold text-red-950 flex items-center pb-3">{number}</span>
       </div>
 
       {/* Title */}
