@@ -10,7 +10,7 @@ function Landing() {
     <>
     <div className="bg-[#766C40] w-screen h-screen">
       <div className='bg-[#766C40]'>
-        <h1 className=' font-libra text-5xl text-black'>hieee</h1>
+        <h1 className=' font-libra text-5xl text-black'></h1>
       </div>
       <Nav/>
     </div>
