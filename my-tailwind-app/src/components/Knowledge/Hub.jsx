@@ -56,7 +56,7 @@ const Hub = () => {
           </div>
           <TopNav />
           
-          <div className="border-2 border-black w-10/12 p-2 rounded-3xl m-6">
+          <div className="border-2 border-black w-auto p-2 rounded-3xl m-6">
             <h1 className="text-3xl font-libra px-4">
               The <span className="text-red-900">Preamble </span>of the Indian Constitution:
             </h1>
