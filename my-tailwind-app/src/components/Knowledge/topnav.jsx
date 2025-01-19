@@ -15,7 +15,7 @@ const TopNav = () => {
       </div>
 
       {/* Search Bar */}
-      <div className="flex items-center justify-between border border-black rounded-full p-1 ">
+      <div className="flex items-center justify-between border border-black rounded-full p-1 pl-2 ">
         {/* Part No Dropdown */}
         <div className="flex items-center ">
           <label htmlFor="part" className="text-black">
