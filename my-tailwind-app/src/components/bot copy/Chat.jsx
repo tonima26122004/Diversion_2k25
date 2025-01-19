@@ -123,7 +123,7 @@ const Chat = () => {
                     {/* Top Section - Main Heading */}
                     <div className="flex">
                         <div className="flex flex-col w-full gap-2 py-4">
-                            <h1 className="text-4xl font-libra font-mediam px-4">
+                            <h1 className="text-4xl font-libra font-md px-4">
                                 {currentQuery
                                     ? `Your query about ${currentQuery}`
                                     : 'Ask your query about'}
@@ -156,7 +156,7 @@ const Chat = () => {
                             <span>{isSidebarOpen ? 'Close Previous' : 'Check Previous'}</span>
                         </button>
                     </div>
-
+                                
                     {/* Sidebar Section */}
                     <div
                         className={`absolute right-0 bottom-0 h-[88%] w-[20%] bg-[#766C40] rounded-l-xl shadow-lg transform transition-transform duration-300 z-20 ${
