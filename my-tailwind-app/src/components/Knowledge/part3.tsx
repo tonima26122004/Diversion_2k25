@@ -8,7 +8,7 @@ const Card3 = ({ number, title, onExplore }) => {
         className="w-96 h-40 bg-center bg-contain bg-no-repeat flex items-center justify-center relative"
         style={{ backgroundImage: "url('/diamond.svg')" }}
       >
-        <span className="text-2xl font-libra font-bold text-red-950 flex items-center pb-2">{number}</span>
+        <span className="text-2xl font-libra font-bold text-red-950 flex items-center pb-3">{number}</span>
 
         {/* Part Image Positioned Below the Diamond */}
         <img
