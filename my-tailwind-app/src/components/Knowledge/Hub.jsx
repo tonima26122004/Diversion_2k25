@@ -82,7 +82,7 @@ const Hub = () => {
               The <span className="text-red-900">Parts </span>of the Indian Constitution:
             </h1>
             <div className="border-[#766C40] border-2 rounded-full w-[35%] ml-4"></div>
-            <div className="flex justify-between gap-10 pr-12">
+            <div className="flex justify-between gap-6 pr-16">
           {/* Content */}
           <Card title="Union and its Territory" number="I" onExplore={() => handleCardClick("Union and its Territory")} />
           <Card title="Citizenship" number="II" onExplore={() => handleCardClick("Citizenship")} />
