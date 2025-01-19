@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./landing";
 import Chat from "./components/bot copy/Chat";
-// import Hub from "./components/Knowledge/Hub";
+
+import Hub from "./components/Knowledge/Hub";
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/Chat" element={<Chat />} />
-        {/* <Route path="/Hub" element={<Hub />} /> */}
+        <Route path="/Hub" element={<Hub />} />
 
       </Routes>
     </Router>
