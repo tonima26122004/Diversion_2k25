@@ -17,7 +17,10 @@ function App() {
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Hub" element={<Hub />} />
         <Route path="/about_hub" element={<A_hub />} />
+
         {/* about_hub *Top nav* routes */}
+
+        <Route path="/Read the article" element={<A_hub />} />
         <Route path="/Visualize your lesson" element={<Visualize />} />
         <Route path="/Play to find way" element={<Game />} />
         <Route path="/Related cases" element={<Cases />} />
