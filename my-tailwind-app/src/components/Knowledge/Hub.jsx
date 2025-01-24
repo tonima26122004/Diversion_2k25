@@ -56,7 +56,7 @@ const Hub = () => {
           </div>
           <TopNav />
           
-          <div className="border-2 border-black w-10/12 p-2 rounded-3xl m-6">
+          <div className="border-2 border-black w-auto p-2 rounded-3xl m-6">
             <h1 className="text-3xl font-libra px-4">
               The <span className="text-red-900">Preamble </span>of the Indian Constitution:
             </h1>
@@ -88,23 +88,23 @@ const Hub = () => {
           <Card title="Citizenship" number="II" onExplore={() => handleCardClick("Citizenship")} />
           <Card title="Fundamental Rights" number="III" onExplore={() => handleCardClick("Fundamental Rights")} />
           </div>
-          <div className="flex justify-between gap-10 pr-12">
+          <div className="flex justify-between gap-6 pr-16">
           <Card title="Directive Principles of State policy" number="IV" onExplore={() => handleCardClick("Directive Principles of State policy")} />
           <Card2 title="Fundamental Duties" number="IV" onExplore={() => handleCardClick("Citizenship")} />
           <Card title="The Union" number="V" onExplore={() => handleCardClick("Fundamental Rights")} />
           </div>
-          <div className="flex justify-between gap-10 pr-12">
+          <div className="flex justify-between gap-6 pr-16">
           {/* Content */}
           <Card title="The States”" number="VI" onExplore={() => handleCardClick("Union and its Territory")} />
           <Card title="Repealed by the Constitution Act, 1956" number="VII" onExplore={() => handleCardClick("Citizenship")} />
           <Card title="The Union Territories" number="VIII" onExplore={() => handleCardClick("Fundamental Rights")} />
           </div>
-          <div className="flex justify-between gap-10 pr-12">
+          <div className="flex justify-between gap-6 pr-16">
           <Card title="The Panchayats" number="IX" onExplore={() => handleCardClick("Directive Principles of State policy")} />
           <Card2 title="The Municipalities" number="IX" onExplore={() => handleCardClick("Citizenship")} />
           <Card3 title="The Co-operative Societies" number="IX" onExplore={() => handleCardClick("Fundamental Rights")} />
           </div>
-          <div className="flex justify-between gap-10 pr-12">
+          <div className="flex justify-between gap-6 pr-16">
           {/* Content */}
           <Card title="The Scheduled and Tribal Areas" number="X" onExplore={() => handleCardClick("Union and its Territory")} />
           <Card title="Relations between the Union and States" number="XI" onExplore={() => handleCardClick("Citizenship")} />
