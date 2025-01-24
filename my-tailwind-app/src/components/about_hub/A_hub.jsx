@@ -22,7 +22,7 @@ const A_hub = () => {
 
             {/* Heading */}
           <div className="flex">
-            <div className="flex flex-col w-full gap-2 py-4">
+            <div className="flex flex-col w-full gap-2 py-2">
               <div>
                 <img className="px-4 w-[180px]" src="Part no.svg" alt="" />
               </div>
@@ -45,7 +45,7 @@ const A_hub = () => {
 
           {/* displaybox */}
           
-          <div className="relative border-2 border-black w-[90%] h-[72%] mx-auto mt-4 p-4 rounded-xl">
+          <div className="relative border-2 border-black w-[90%] h-[70%] mx-auto mt-3 p-4 rounded-xl">
             <Displaybox/>
              
              <button className="flex items-center absolute gap-3 bottom-6 text-lg font-semibold border-4 border-black p-1 rounded-lg left-1/2 -translate-x-1/2">
