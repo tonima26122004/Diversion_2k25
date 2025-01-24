@@ -13,7 +13,7 @@ const About_nav = () => {
 
   return (
     <div>
-      <div className="mt-6">
+      <div className="mt-2">
         <ul className="font-libra flex gap-14 justify-center text-xl">
           <li>
             <button
