@@ -2,10 +2,17 @@ import React from "react";
 import Nav from "../main copy/Nav";
 import LanguageDropdown from "../bot copy/Lang";
 import Displaybox from "./Displaybox";
-import { Link } from "react-router-dom";
+
+import  { useState } from "react";
+import About_nav from "./About_nav";
+
+
+
+   
 
 
 const A_hub = () => {
+  
   return (
     <div className="relative">
       <div className="bg-[#766C40] h-screen w-screen flex items-center justify-between relative">
@@ -34,42 +41,7 @@ const A_hub = () => {
           </div>
 
           {/* Nav */}
-          <div className="mt-6">
-            <ul className="font-libra flex gap-14 justify-center text-xl">
-                <li>
-                <Link
-                    
-                    className="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#65090A] after:transition-all after:duration-400 hover:after:w-full"
-                >
-                    Read the article
-                </Link>
-                </li>
-                <li>
-                <Link
-                    to="/Visualize your lesson"
-                    className="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#65090A] after:transition-all after:duration-400 hover:after:w-full"
-                >
-                    Visualize your lesson
-                </Link>
-                </li>
-                <li>
-                <Link
-                    to="/Play to find way"
-                    className="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#65090A] after:transition-all after:duration-400 hover:after:w-full"
-                >
-                    Play to find way
-                </Link>
-                </li>
-                <li>
-                <Link
-                    to="/Related cases"
-                    className="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#65090A] after:transition-all after:duration-400 hover:after:w-full"
-                >
-                    Related cases
-                </Link>
-                </li>
-            </ul>
-            </div>;
+          <About_nav/>
 
           {/* displaybox */}
           
