@@ -1,11 +1,12 @@
 import React from 'react'
-import About_nav from '../About_nav'
+import About_nav from '../read_nav'
+import Visualize_nav from './Visualize_nav'
 
 const Visualize = () => {
   return (
     <div>
       awdawd
-      <About_nav/>
+      <Visualize_nav/>
     </div>
   )
 }
