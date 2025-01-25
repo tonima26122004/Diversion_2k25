@@ -1,9 +1,10 @@
 import React from 'react'
+import Game_nav from './Game_nav'
 
 const Game = () => {
   return (
     <div>
-      awduvg
+      <Game_nav/>
     </div>
   )
 }

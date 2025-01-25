@@ -4,7 +4,7 @@ import LanguageDropdown from "../bot copy/Lang";
 import Displaybox from "./Displaybox";
 
 import  { useState } from "react";
-import About_nav from "./About_nav";
+import About_nav from "./read_nav";
 
 
 
