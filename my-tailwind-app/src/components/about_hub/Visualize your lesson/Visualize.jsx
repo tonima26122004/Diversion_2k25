@@ -5,6 +5,7 @@ import LanguageDropdown from "../../bot copy/Lang";
 import Visualize_nav from "./Visualize_nav";
 
 import { useState } from "react";
+import Video from "../Video";
 
 const Visualize = () => {
   return (
@@ -41,23 +42,15 @@ const Visualize = () => {
           <div className="relative border-2 border-black w-[90%] h-[74%] mx-auto mt-3 p-4 rounded-xl">
            
            <h1 className="text-3xl px-4 font-libra font-semibold text-[#766C40] ">Berubari Union Case <a className="text-sm font-libra text-[#65090A]" >(1960)</a></h1>
-
-            <div className="flex justify-center items-center mt-6">
-              <iframe
-                className="w-full max-w-[560px] h-[315px] md:max-w-[720px] md:h-[405px] lg:max-w-[1080px] lg:h-[508px] rounded-xl shadow-lg"
-                src="https://www.youtube.com/embed/SE5QYIPRN3E"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+            
+            <Video videoId="SE5QYIPRN3E"/>
+            
             {/* <Displaybox/> */}
 
-            <button className="flex items-center absolute gap-1 bottom-6 text-lg font-semibold border-4 border-black p-1 rounded-lg left-1/2 -translate-x-1/2">
+            {/* <button className="flex items-center absolute gap-1 bottom-6 text-lg font-semibold border-4 border-black p-1 rounded-lg left-1/2 -translate-x-1/2">
               <img className="w-[20px]" src="next.svg" alt="" />
               Next video
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
