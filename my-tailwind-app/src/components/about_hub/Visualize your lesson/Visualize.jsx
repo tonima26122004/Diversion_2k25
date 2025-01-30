@@ -39,7 +39,7 @@ const Visualize = () => {
 
           {/* displaybox */}
 
-          <div className="relative border-2 border-black w-[90%] h-[74%] mx-auto mt-3 p-4 rounded-xl">
+          <div className="relative border-2 border-black w-[80%] h-[74%] mx-auto mt-3 p-4 rounded-xl">
            
            <h1 className="text-3xl px-4 font-libra font-semibold text-[#766C40] ">Berubari Union Case <a className="text-sm font-libra text-[#65090A]" >(1960)</a></h1>
             

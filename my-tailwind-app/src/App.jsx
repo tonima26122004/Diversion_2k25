@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./landing";
 import Chat from "./components/bot copy/Chat";
 import A_hub from "./components/about_hub/A_hub";
-
+import Part_hub from "./components/Knowledge/part_hub/Part_hub";
 import Hub from "./components/Knowledge/Hub";
 import Cases from "./components/about_hub/Related cases/Cases";
 import Game from "./components/about_hub/Play to find way/Game";
@@ -17,6 +17,7 @@ function App() {
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Hub" element={<Hub />} />
         <Route path="/about_hub" element={<A_hub />} />
+        <Route path="/part_hub" element={<Part_hub />} />
 
         {/* about_hub *Top nav* routes */}
 
