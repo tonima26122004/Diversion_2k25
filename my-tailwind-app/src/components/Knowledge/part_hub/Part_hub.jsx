@@ -36,7 +36,7 @@ const Part_hub = () => {
               <ArticleCard
                 articleNumber={1}
                 articleName="Name and territory of the Union"
-                readUrl="/read-article"
+                readUrl="/Read the article"
                 visualizeUrl="/visualize"
                 playUrl="/play"
                 casesUrl="/cases"
