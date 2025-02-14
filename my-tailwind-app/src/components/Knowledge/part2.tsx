@@ -1,6 +1,9 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Card2 = ({ number, title, onExplore }) => {
+const Card2 = ({ number, title }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col ml-8 relative">
       {/* Diamond Image with Number */}
@@ -8,7 +11,9 @@ const Card2 = ({ number, title, onExplore }) => {
         className="w-96 h-40 bg-center bg-contain bg-no-repeat flex items-center justify-center relative"
         style={{ backgroundImage: "url('/diamond.svg')" }}
       >
-        <span className="text-2xl font-libra font-bold text-red-950 flex items-center pb-3">{number}</span>
+        <span className="text-2xl font-libra font-bold text-red-950 flex items-center pb-3">
+          {number}
+        </span>
 
         {/* Part Image Positioned Below the Diamond */}
         <img
@@ -19,7 +24,9 @@ const Card2 = ({ number, title, onExplore }) => {
       </div>
 
       {/* Title */}
-      <h3 className="text-lg font-semibold text-gray-800 font-libra flex justify-center w-96">{`“${title}”`}</h3>
+      <h3 className="text-lg font-semibold text-gray-800 font-libra flex justify-center w-96">
+        {`“${title}”`}
+      </h3>
 
       {/* Line Decoration */}
       <div>
@@ -28,7 +35,7 @@ const Card2 = ({ number, title, onExplore }) => {
 
       {/* Explore Button */}
       <button
-        onClick={onExplore} // Use the onExplore prop
+        onClick={() => navigate("/part_hub")}
         className="px-4 py-2 border w-32 flex ml-32 font-libra justify-center bg-black rounded-full text-white hover:bg-gray-800 transition"
       >
         Explore &gt;&gt;
