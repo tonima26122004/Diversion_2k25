@@ -29,7 +29,7 @@ function App() {
 
         {/* hot news */}
 
-        <Route path="/Hottie" element={<Hot />} />
+        <Route path="/news" element={<Hot />} />
         
         
 
