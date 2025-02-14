@@ -16,7 +16,6 @@ const Hot = () => {
               <div>
                 <img className="px-4 w-[180px]" src="Part no.svg" alt="" />
               </div>
-
               <h1 className="text-3xl font-libra px-4 text-[#52524D] ">
                 “Name and territory of the Union”
               </h1>
@@ -31,28 +30,25 @@ const Hot = () => {
           </div>
 
           {/* content */}
-          <div className="flex justify-center">
-          <div className="flex flex-col gap-4 ">
-            {/* cards */}
-          <HotCard
-            title="Supreme Court Upholds 'Secular' and 'Socialist' in Preamble"
-            date="February 14, 2025"
-            content="The Supreme CouOn November 26, 2024, the Supreme Court of India dismissed petitions challenging the inclusion of the words 'secular' and 'socialist' in the Preamble of the Constitution. The court affirmed that these terms, added through the Forty-second Amendment Act of 1976, align with the nation's foundational principles and that Parliament holds the authority to amend the Constitution under Article 368.rt has ruled in favor of maintaining key amendments, reinforcing democratic principles and ensuring constitutional integrity."
-            onLearnMore={() => alert("Learn more clicked!")}
-          />
-          <HotCard
-            title="Supreme Court Upholds 'Secular' and 'Socialist' in Preamble"
-            date="February 14, 2025"
-            content="The Supreme CouOn November 26, 2024, the Supreme Court of India dismissed petitions challenging the inclusion of the words 'secular' and 'socialist' in the Preamble of the Constitution. The court affirmed that these terms, added through the Forty-second Amendment Act of 1976, align with the nation's foundational principles and that Parliament holds the authority to amend the Constitution under Article 368.rt has ruled in favor of maintaining key amendments, reinforcing democratic principles and ensuring constitutional integrity."
-            onLearnMore={() => alert("Learn more clicked!")}
-          />
-
-
-
+          <div className="flex justify-center w-full mt-4">
+            <div className="flex flex-col gap-4 items-center w-full">
+              {/* cards */}
+              <div className="flex flex-col gap-4 items-center w-[95%]">
+                <HotCard
+                  title="Supreme Court Upholds 'Secular' and 'Socialist' in Preamble"
+                  date="February 14, 2025"
+                  content="The Supreme Court, on November 26, 2024, dismissed petitions challenging the inclusion of the words 'secular' and 'socialist' in the Preamble of the Constitution. The court affirmed that these terms, added through the Forty-second Amendment Act of 1976, align with the nation's foundational principles and that Parliament holds the authority to amend the Constitution under Article 368."
+                  onLearnMore={() => alert("Learn more clicked!")}
+                />
+                <HotCard
+                  title="Supreme Court Upholds 'Secular' and 'Socialist' in Preamble"
+                  date="February 14, 2025"
+                  content="The Supreme Court, on November 26, 2024, dismissed petitions challenging the inclusion of the words 'secular' and 'socialist' in the Preamble of the Constitution. The court affirmed that these terms, added through the Forty-second Amendment Act of 1976, align with the nation's foundational principles and that Parliament holds the authority to amend the Constitution under Article 368."
+                  onLearnMore={() => alert("Learn more clicked!")}
+                />
+              </div>
+            </div>
           </div>
-          </div>
-
-
         </div>
       </div>
     </div>
@@ -60,4 +56,3 @@ const Hot = () => {
 };
 
 export default Hot;
-
