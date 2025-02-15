@@ -57,7 +57,7 @@ const Hot = () => {
           </div>
 
           {/* Scrollable Content */}
-          <div className=" flex-1 px-4 py-4 min-h-0 overflow-y-auto scrollbar-thin scrollbar-thumb-[#766C40] scrollbar-track-transparent">
+          <div className=" flex-1 px-4 py-4 min-h-0 overflow-y-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent">
             <div className="flex flex-col gap-4 items-center w-full">
               {/* Cards */}
               <div className="flex flex-col gap-4 items-center w-full">
