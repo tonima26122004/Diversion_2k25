@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "../main copy/Nav";
 import LanguageDropdown from "../bot copy/Lang";
 import HotCard from "./Hot_card.jsx";
 
 const Hot = () => {
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const res = await fetch(
+          "https://newsapi.org/v2/everything?q=political&from=2025-2-14&sortBy=publishedAt&apiKey=52c8562a09804547856d91128eee3af1"
+        );
+        const data = await res.json();
+        setNews(data.articles); 
+      } catch (error) {
+        console.error("Error fetching news:", error);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
   return (
     <div className="relative">
       <div className="bg-[#766C40] h-screen w-screen flex items-center justify-between relative">
         <Nav />
-        
+
         <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative overflow-hidden main">
           {/* Heading */}
           <div className="flex">
@@ -29,23 +47,23 @@ const Hot = () => {
             </div>
           </div>
 
-          {/* content */}
+          {/* News Content */}
           <div className="flex justify-center w-full mt-4">
             <div className="flex flex-col gap-4 items-center w-full">
-              {/* cards */}
               <div className="flex flex-col gap-4 items-center w-[95%]">
-                <HotCard
-                  title="Supreme Court Upholds 'Secular' and 'Socialist' in Preamble"
-                  date="February 14, 2025"
-                  content="The Supreme Court, on November 26, 2024, dismissed petitions challenging the inclusion of the words 'secular' and 'socialist' in the Preamble of the Constitution. The court affirmed that these terms, added through the Forty-second Amendment Act of 1976, align with the nation's foundational principles and that Parliament holds the authority to amend the Constitution under Article 368."
-                  onLearnMore={() => alert("Learn more clicked!")}
-                />
-                <HotCard
-                  title="Supreme Court Upholds 'Secular' and 'Socialist' in Preamble"
-                  date="February 14, 2025"
-                  content="The Supreme Court, on November 26, 2024, dismissed petitions challenging the inclusion of the words 'secular' and 'socialist' in the Preamble of the Constitution. The court affirmed that these terms, added through the Forty-second Amendment Act of 1976, align with the nation's foundational principles and that Parliament holds the authority to amend the Constitution under Article 368."
-                  onLearnMore={() => alert("Learn more clicked!")}
-                />
+                {news.length > 0 ? (
+                  news.map((article, index) => (
+                    <HotCard
+                      key={index}
+                      title={article.title}
+                      date={new Date(article.publishedAt).toLocaleDateString()}
+                      content={article.description || "No description available."}
+                      onLearnMore={() => window.open(article.url, "_blank")}
+                    />
+                  ))
+                ) : (
+                  <p className="text-lg text-gray-700">Loading news...</p>
+                )}
               </div>
             </div>
           </div>
