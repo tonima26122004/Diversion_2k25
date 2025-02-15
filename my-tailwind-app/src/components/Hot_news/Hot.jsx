@@ -37,11 +37,11 @@ const Hot = () => {
           </div>
 
           {/* Scrollable Content */}
-          <div className="overflow-y-auto flex-1 px-4 py-4 min-h-0">
+          <div className=" flex-1 px-4 py-4 min-h-0 overflow-y-auto scrollbar-thin scrollbar-thumb-[#766C40] scrollbar-track-transparent">
             <div className="flex flex-col gap-4 items-center w-full">
               {/* Cards */}
               <div className="flex flex-col gap-4 items-center w-full">
-                {Array.from({ length: 6 }).map((_, index) => (
+                {Array.from({ length: 25 }).map((_, index) => (
                   <HotCard
                     key={index}
                     title="Supreme Court Upholds 'Secular' and 'Socialist' in Preamble"
