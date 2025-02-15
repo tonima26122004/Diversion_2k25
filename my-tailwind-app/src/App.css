@@ -10,3 +10,23 @@
 *{
     @apply font-libra;
 }
+
+/* Customize scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #766C40; /* Scroll thumb color */
+    border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5c5230; /* Scroll thumb hover color */
+  }
+  
