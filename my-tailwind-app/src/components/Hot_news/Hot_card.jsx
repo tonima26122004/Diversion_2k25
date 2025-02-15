@@ -7,7 +7,7 @@ const HotCard = ({ title, date, content, onLearnMore }) => {
       {/* Left Section (35%) */}
       <div className="w-[30%] flex flex-col justify-between ">
         <h2 className="text-3xl font-libra font-semibold">{title}</h2>
-        <p className="text-md font-libra text-gray-500">{date}</p>
+        <p className="text-md font-libra text-black">{date}</p>
       </div>
       
       {/* Right Section (65%) */}
