@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { ChevronDown } from "lucide-react"; // Using Lucide for dropdown arrow
 
 const HotNav = () => {
-  const [selectedCategory, setSelectedCategory] = useState("About Constitution");
+  const [selectedCategory, setSelectedCategory] =
+    useState("About Constitution");
 
   return (
-    <div className="w-[24%] pl-6" style={{ fontFamily: "Arial, sans-serif" }}>
+    <div className="w-[25%] pl-6" style={{ fontFamily: "Arial, sans-serif" }}>
       {/* Title */}
       <div className="mb-2">
         <span className="text-xl font-libra text-black">
-          Search <span className="text-red-900">News</span> by <span className="text-red-900">Category</span>
+          Search <span className="text-red-900">News</span> by{" "}
+          <span className="text-red-900">Category</span>
         </span>
       </div>
 
@@ -20,7 +22,7 @@ const HotNav = () => {
           <label className="text-black">Category:</label>
           <div className="relative">
             <select
-              className="bg-transparent rounded py-1 ml-2 text-gray-500 pr-6 focus:outline-none focus:ring-2 focus:ring-gray-500 appearance-none"
+              className="bg-transparent rounded py-1 ml-2 text-gray-500 pr-6 appearance-none outline-none"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
@@ -29,7 +31,8 @@ const HotNav = () => {
               <option value="Crime">Crime</option>
               <option value="Education">Education</option>
             </select>
-            <ChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4 pointer-events-none" />
+
+            <ChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 bg-[#E4E2D6] w-4 h-4 pointer-events-none" />
           </div>
         </div>
 

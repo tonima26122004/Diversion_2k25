@@ -62,7 +62,7 @@ const LanguageDropdown = () => {
 
       {/* Dropdown Menu */}
       {isOpen && (
-    <div className="absolute mt-2 w-60  bg-transparent shadow-lg max-h-60 overflow-auto border border-gray-200 rounded-md z-10">
+    <div className="absolute mt-2 w-60  bg-[#E4E2D6] shadow-lg max-h-60 overflow-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent border border-gray-200 rounded-md z-10">
         <div className="custom-scrollbar ">
             {languages.map((language, index) => (
                 <div
