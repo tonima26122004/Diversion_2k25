@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Nav from "../main copy/Nav";
 import LanguageDropdown from "../bot copy/Lang";
 import HotCard from "./Hot_card.jsx";
-import HotNav from "./Hot_nav.jsx";
 import { ChevronDown } from "lucide-react";
 
 const Hot = () => {
@@ -25,20 +24,20 @@ const Hot = () => {
 
 
 
-  // useEffect(() => {
-  //   const fetchNews = async () => {
+  useEffect(() => {
+    const fetchNews = async () => {
       
-  //       const res = await fetch(
-  //         "https://newsapi.org/v2/everything?q=political&from=2025-2-16&sortBy=publishedAt&apiKey=52c8562a09804547856d91128eee3af1"
-  //       );
-  //       const data = await res.json();
-  //       setNews(data.articles); 
+        const res = await fetch(
+          "https://newsapi.org/v2/everything?q=political&from=2025-2-16&sortBy=publishedAt&apiKey=52c8562a09804547856d91128eee3af1"
+        );
+        const data = await res.json();
+        setNews(data.articles); 
   
       
-  //   };
+    };
 
-  //   fetchNews();
-  // }, []);
+    fetchNews();
+  }, []);
 
 
 
@@ -83,7 +82,7 @@ const Hot = () => {
       </div>
 
       {/* Search Bar */}
-      <div className="flex items-center justify-between border border-black rounded-full p-1 pl-2" onClick={fetchNews}>
+      <div className="flex items-center justify-between border border-black rounded-full p-1 pl-2">
         {/* Category Dropdown */}
         <div className="flex items-center gap-2 ml-4">
           <label className="text-black">Category:</label>
@@ -97,6 +96,10 @@ const Hot = () => {
               <option value="Traffic">Traffic</option>
               <option value="Crime">Crime</option>
               <option value="Education">Education</option>
+              <option value="Technology">Technology</option>
+              <option value="Health & Safety">Health & Safety</option>
+              <option value="Economy">Economy</option>
+              
             </select>
 
             <ChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 bg-[#E4E2D6] w-4 h-4 pointer-events-none" />
@@ -104,7 +107,7 @@ const Hot = () => {
         </div>
 
         {/* Search Button */}
-        <button className="bg-black text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-800">
+        <button className="bg-black text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-800"  onClick={fetchNews}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -146,7 +149,7 @@ const Hot = () => {
                       key={index}
                       title={article.title}
                       date={new Date(article.publishedAt).toLocaleDateString()}
-                      content={article.content || "No description available."}
+                      content={article.description|| "No description available."}
                       onLearnMore={() => window.open(article.url, "_blank")}
                     />
                   ))
