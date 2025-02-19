@@ -49,7 +49,7 @@ const InputBox = ({ onAnswerSubmit }) => {
   };
 
   return (
-    <div className="flex flex-col font-libra items-center bg-[#E4E2D6] p-4 rounded-lg">
+    <div className="flex flex-col font-libra items-center bg-[#E4E2D6] rounded-lg">
       {!isCompleted ? (
         <>
           {/* Input Box */}

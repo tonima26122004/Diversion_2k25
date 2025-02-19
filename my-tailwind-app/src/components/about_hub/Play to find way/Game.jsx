@@ -21,7 +21,7 @@ Alex: But ....... sir ...... what shall I do now?`;
       <div className="bg-[#766C40] h-screen w-screen flex items-center justify-between relative">
         <Nav />
 
-        <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative overflow-hidden">
+        <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative overflow-y-scroll">
           {/* Heading */}
           <div className="flex">
             <div className="flex flex-col w-full gap-2 py-2">
@@ -46,7 +46,7 @@ Alex: But ....... sir ...... what shall I do now?`;
           <Game_nav />
 
           {/* Display box */}
-          <div className="relative border-2 border-black w-[90%] h-[74%] mx-auto p-4 rounded-xl">
+          <div className="relative border-2 border-black mt-2 w-[90%] h-[75%] mx-auto  rounded-xl">
             <div className="ml-4">
               <div className="font-libra text-3xl">
                 Guess the <span className="text-red-900">Answers.</span>
@@ -61,7 +61,7 @@ Alex: But ....... sir ...... what shall I do now?`;
                   {questionText.split("\n").map((line, index) => (
                     <div key={index}>{line}</div>
                   ))}
-                   <div className="mt-6 text-2xl font-semibold text-gray-700 flex gap-8">
+                   <div className=" text-2xl font-semibold text-gray-700 flex gap-8">
                 {Object.entries(answers).map(([stage, value], index) => (
                   <div key={index} className="flex items-center font-libra">
                     <span className="text-[#4B0F0F]">{stage}:</span>
