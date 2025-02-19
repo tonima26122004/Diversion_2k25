@@ -13,7 +13,7 @@ const DisplayBox = ({ ans, displaybutton }) => {
     return (
         <div
             ref={containerRef}
-            className="bg-[#E4E2D6] w-[96%] mx-auto mt-4 rounded-lg p-4 h-[500px] overflow-y-scroll"
+            className="bg-[#E4E2D6] w-[96%] mx-auto mt-4 rounded-lg p-4 h-[450px] overflow-y-scroll scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent"
         >
             <div className="flex flex-col space-y-4 pb-16">
                 {ans.map((msg, index) => (

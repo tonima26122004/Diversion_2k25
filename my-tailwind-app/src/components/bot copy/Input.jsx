@@ -79,14 +79,23 @@ const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, 
         }
     };
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            getans();
+            setIsQuerySubmitted(true);
+            setIsInputMoved(true);
+        }
+    };
+
     return (
         <div className="relative w-full">
             <input
                 type="text"
                 value={que}
                 onChange={(e) => setque(e.target.value)}
+                onKeyDown={handleKeyDown}
                 placeholder="Enter Your Query here"
-                className="px-4 py-2 border-2 font-libra bg-transparent outline-0 border-[#766C40] rounded-md w-full pr-36"
+                className="px-4 py-2 border-2 font-libra bg-[#E4E2D6] outline-0 border-[#766C40] rounded-md w-full pr-36"
             />
 
             <div className="absolute inset-y-0 right-0 flex items-center gap-4">
