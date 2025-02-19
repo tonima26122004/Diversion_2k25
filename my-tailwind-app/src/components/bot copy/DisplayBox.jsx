@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Listen from "./Listen";
 
 const DisplayBox = ({ ans, displaybutton }) => {
     const containerRef = useRef(null); 
@@ -41,7 +42,7 @@ const DisplayBox = ({ ans, displaybutton }) => {
                                 transition={{ duration: 0.5, delay: index * 0.5 }}
                                 className="flex w-full items-start space-x-3"
                             >
-                                <div className="w-10 h-10 mt-4">
+                                <div className="w-10 h-10 mt-4 ">
                                     <img
                                         src="Group 41.svg"
                                         alt="Bot Icon"
@@ -53,7 +54,11 @@ const DisplayBox = ({ ans, displaybutton }) => {
                                     style={{ fontWeight: 600 }}
                                 >
                                     {msg.bot}
+                                    <div className="mt-3"><Listen/></div>
                                 </div>
+                                
+                                
+                                
                             </motion.div>
                         )}
 
@@ -81,6 +86,7 @@ const DisplayBox = ({ ans, displaybutton }) => {
                     </React.Fragment>
                 ))}
             </div>
+            
         </div>
     );
 };
