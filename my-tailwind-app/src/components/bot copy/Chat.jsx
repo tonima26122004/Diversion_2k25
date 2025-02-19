@@ -3,7 +3,8 @@ import Nav from '../main copy/Nav';
 import LanguageDropdown from './Lang';
 import AnimatedInputBox from './Input';
 import DisplayBox from './DisplayBox';
-import axios from 'axios'
+import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 
 const Chat = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -64,8 +65,8 @@ const Chat = () => {
           data: {
             "contents": [{
               "parts": [{
-                "text": `${que}`
-              }]
+                "text": `${que} Provide a clear, numbered point-wise in circle bullet point answer using proper line breaks and ensuring each point starts on a new line. Use full sentences and separate each point clearly.`
+      }]
             }]
           }
         });
@@ -201,8 +202,8 @@ const Chat = () => {
 
 
                     {/* Display Box Section */}
-                    <DisplayBox queries={displayedQueries} ans={ans} Loading={Loading} show={show}  displaybutton={displaybutton} />
-                </div>
+                  <pre className='whitespace-pre-wrap break-words overflow-x-hidden'>  <DisplayBox queries={displayedQueries} ans={ans} Loading={Loading} show={show}  displaybutton={displaybutton} />
+                  </pre> </div>
             </div>
         </div>
     );
