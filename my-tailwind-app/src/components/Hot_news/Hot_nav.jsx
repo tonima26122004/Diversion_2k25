@@ -22,7 +22,7 @@ const HotNav = () => {
           <label className="text-black">Category:</label>
           <div className="relative">
             <select
-              className="bg-transparent rounded py-1 ml-2 text-gray-500 pr-6 appearance-none outline-none"
+              className="bg-[#766C40] rounded py-1 ml-2 text-gray-500 pr-6 appearance-none outline-none"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
