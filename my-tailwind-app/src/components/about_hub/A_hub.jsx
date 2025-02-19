@@ -6,12 +6,35 @@ import Displaybox from "./Displaybox";
 import  { useState } from "react";
 import About_nav from "./read_nav";
 
-
+import { useEffect } from "react";
 
    
 
 
 const A_hub = () => {
+
+  const[read,setread]=useState('');
+
+
+  useEffect(() => {
+    const fetch_data = async () => {
+        const data = await fetch("/knowledge.json"); 
+        const res = await data.json(); 
+        console.log(res);
+        setread(res.Articles);
+      
+    };
+    fetch_data();
+  }, []);
+
+
+
+
+
+
+
+
+
   
   return (
     <div className="relative">
@@ -46,7 +69,7 @@ const A_hub = () => {
           {/* displaybox */}
           
           <div className="relative border-2 border-black w-[90%] h-[74%] mx-auto mt-3 p-4 rounded-xl">
-            <Displaybox/>
+            <Displaybox  read={read}/>
              
              <button className="flex items-center absolute gap-3 bottom-6 text-lg font-semibold border-4 border-black p-1 rounded-lg left-1/2 -translate-x-1/2">
                 <img className="w-[20px]" src="listen.svg" alt="" />

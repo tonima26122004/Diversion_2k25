@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Displaybox = () => {
+const Displaybox = (read) => {
   return (
-    <div>
-      
-    </div>
+  <div></div>
+    
   )
 }
 
