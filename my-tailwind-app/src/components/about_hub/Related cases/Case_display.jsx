@@ -2,7 +2,7 @@ import React from 'react'
 
 const Case_display = () => {
   return (
-    <div className='overflow-y-auto p-4'>
+    <div className='overflow-y-auto px-4'> 
       <div className='flex flex-col'>
         <div className='font-libra text-2xl mt-3 '>
             <h1>Article 1 of the Indian Constitution has been the subject of several landmark cases that have shaped the interpretation of India's territorial integrity and sovereignty. Here are a few important cases related to Article 1:</h1>
