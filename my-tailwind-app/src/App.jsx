@@ -22,10 +22,10 @@ function App() {
 
         {/* about_hub *Top nav* routes */}
 
-        <Route path="/Read the article" element={<A_hub />} />
-        <Route path="/Visualize your lesson" element={<Visualize />} />
-        <Route path="/Play to find way" element={<Game />} />
-        <Route path="/Related cases" element={<Cases />} />
+        <Route path="/Read_the_article" element={<A_hub />} />
+        <Route path="/Visualize_your_lesson" element={<Visualize />} />
+        <Route path="/Play_to_find_way" element={<Game />} />
+        <Route path="/Related_cases" element={<Cases />} />
 
         {/* hot news */}
 
