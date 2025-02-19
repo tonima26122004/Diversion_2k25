@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landing from "./landing";
+import Landing from "./components/Landing/landing";
 import Chat from "./components/bot copy/Chat";
 import A_hub from "./components/about_hub/A_hub";
 import Part_hub from "./components/Knowledge/part_hub/Part_hub";
