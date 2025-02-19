@@ -5,6 +5,7 @@ import LanguageDropdown from "../../bot copy/Lang";
 import Cases_nav from "./Cases_nav";
 
 import  { useState } from "react";
+import Case_display from "./Case_display";
 
 
 
@@ -48,6 +49,7 @@ const Cases = () => {
           
           <div className="relative border-2 border-black w-[90%] h-[74%] mx-auto mt-3 p-4 rounded-xl">
             {/* <Displaybox/> */}
+            <Case_display/>
              
              <button className="flex items-center absolute gap-3 bottom-6 text-lg font-semibold border-4 border-black p-1 rounded-lg left-1/2 -translate-x-1/2">
                 <img className="w-[20px]" src="listen.svg" alt="" />
