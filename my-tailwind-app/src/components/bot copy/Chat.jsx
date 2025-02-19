@@ -65,7 +65,7 @@ const Chat = () => {
           data: {
             "contents": [{
               "parts": [{
-                "text": `${que} Provide a clear, numbered point-wise in circle bullet point answer using proper line breaks and ensuring each point starts on a new line. Use full sentences and separate each point clearly.don't give any star in answer`
+                "text": `${que} Provide a clear,give the answer in circle bullet(medium size with filled) in point-wise  answer using proper line breaks and ensuring each point starts on a new line. Use full sentences and separate each point clearly.don't give any star in answer`
       }]
             }]
           }

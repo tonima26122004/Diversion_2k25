@@ -1,75 +1,74 @@
 {
-    "Articles": [
-      {
-        "Number": 1,
-        "Title": "Name and Territory of the Union",
-        "Description": "India, that is Bharat, shall be a Union of States.",
-        "Details": [
-          "The States and the territories thereof shall be as specified in the First Schedule.",
-          "The territory of India shall comprise—",
-          "(a) the territories of the States,",
-          "(b) the Union territories specified in the First Schedule, and",
-          "(c) such other territories as may be acquired."
-        ],
-        "Related_Cases": [
-          {
-            "Case": "Berubari Union Case (1960)",
-            "Background": "After the partition of India in 1947, the Berubari Union in West Bengal became a disputed territory between India and Pakistan. Under the Nehru-Noon Agreement of 1958, India agreed to transfer the Berubari Union to Pakistan, sparking debates about whether such an action was constitutionally valid.",
-            "Sequence_of_Events": "The President of India referred the matter to the Supreme Court for an advisory opinion under Article 143. The key question was whether Parliament could transfer Indian territory to another country through legislation under Article 3 or if it required a constitutional amendment under Article 368.",
-            "Judgment": "The Supreme Court held that Parliament cannot transfer any part of India’s territory to a foreign nation through ordinary legislation under Article 3. It ruled that such a transfer required a constitutional amendment under Article 368.",
-            "Ultimate_Solution": "To implement the agreement, Parliament passed the Constitution (Ninth Amendment) Act, 1960, authorizing the cession of the Berubari Union to Pakistan."
-          },
-          {
-            "Case": "State of West Bengal v. Union of India (1962)",
-            "Background": "West Bengal challenged the authority of the central government to reorganize states, claiming that the States Reorganization Act infringed upon the federal structure of the Constitution.",
-            "Sequence_of_Events": "The Supreme Court was tasked with determining whether the central government had the power to alter state boundaries and names under Article 3 without undermining state autonomy.",
-            "Judgment": "The Court ruled that India is an indestructible union of destructible states, emphasizing that the central government holds the authority to reorganize states for administrative efficiency.",
-            "Ultimate_Solution": "The ruling reaffirmed the central government’s power under Article 3 while emphasizing the importance of federal unity."
-          }
-        ]
-      },
-      {
-        "Number": 3,
-        "Title": "Formation of New States and Alteration of Areas, Boundaries, or Names",
-        "Description": "Parliament may by law— (a) form a new State by separation, uniting, or altering boundaries; (b) increase the area of any State; (c) diminish the area of any State; (d) alter the boundaries of any State; (e) alter the name of any State.",
-        "Related_Cases": [
-          {
-            "Case": "Reorganization of Andhra Pradesh (1956)",
-            "Background": "After independence, there was widespread demand for the creation of linguistic states. The agitation for a separate Andhra state, led by Potti Sriramulu, intensified after his death following a 58-day hunger strike.",
-            "Sequence_of_Events": "Parliament enacted the States Reorganization Act, creating Andhra Pradesh as the first state based on linguistic identity. This move was aimed at addressing the cultural aspirations of Telugu-speaking people.",
-            "Judgment": "The reorganization was upheld as a constitutional exercise under Article 3.",
-            "Ultimate_Solution": "The case set a precedent for the creation of other linguistic states, shaping India’s federal structure."
-          }
-        ]
-      },
-      {
-        "Number": 11,
-        "Title": "Parliament to Regulate the Right of Citizenship by Law",
-        "Description": "Nothing in the foregoing provisions of this Part shall derogate from the power of Parliament to make any provision with respect to the acquisition and termination of citizenship and all other matters relating to citizenship.",
-        "Related_Cases": [
-          {
-            "Case": "Sarbananda Sonowal v. Union of India (2005)",
-            "Background": "The petitioner challenged the constitutionality of the Illegal Migrants (Determination by Tribunals) Act, 1983, which dealt with identifying illegal immigrants in Assam. The Act was perceived as ineffective in curbing illegal immigration from Bangladesh.",
-            "Sequence_of_Events": "Sarbananda Sonowal argued that the Act contravened the Citizenship Act, 1955, by placing a disproportionate burden of proof on Indian citizens to establish the citizenship status of alleged illegal immigrants.",
-            "Judgment": "The Supreme Court declared the IMDT Act unconstitutional, stating it violated Article 14 (equality before law) and undermined Article 11 by impeding Parliament's ability to regulate citizenship effectively.",
-            "Ultimate_Solution": "This landmark case upheld the primacy of the Citizenship Act and strengthened legal mechanisms to address illegal immigration."
-          }
-        ]
-      },
-      {
-        "Number": 14,
-        "Title": "Right to Equality before Law",
-        "Description": "The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.",
-        "Related_Cases": [
-          {
-            "Case": "E.P. Royappa v. State of Tamil Nadu (1974)",
-            "Background": "E.P. Royappa, a senior IAS officer, was transferred from his position as Chief Secretary to a less significant role. He claimed this transfer was politically motivated, arbitrary, and violated his fundamental rights under Article 14.",
-            "Sequence_of_Events": "Royappa argued that his demotion was not based on merit or administrative necessity but was arbitrary and discriminatory. The state justified the transfer, citing administrative needs.",
-            "Judgment": "The Supreme Court held that Article 14 encompasses not only discrimination but also arbitrariness. The Court stated, 'Equality is antithetical to arbitrariness,' expanding the interpretation of equality to include fairness in state actions.",
-            "Ultimate_Solution": "This case established the principle that arbitrariness in administrative decisions violates Article 14, ensuring fairness in governance."
-          }
-        ]
-      }
-    ]
-  }
-  
+  "Articles": [
+    {
+      "Number": 1,
+      "Title": "Name and Territory of the Union",
+      "Description": "India, that is Bharat, shall be a Union of States.",
+      "Details": [
+        "The States and the territories thereof shall be as specified in the First Schedule.",
+        "The territory of India shall comprise—",
+        "(a) the territories of the States;",
+        "(b) the Union territories specified in the First Schedule; and",
+        "(c) such other territories as may be acquired."
+      ],
+      "Related_Cases": [
+        {
+          "Case": "Berubari Union Case (1960)",
+          "Background": "After the partition of India in 1947, the Berubari Union in West Bengal became a disputed territory between India and Pakistan. Under the Nehru-Noon Agreement of 1958, India agreed to transfer the Berubari Union to Pakistan, sparking debates about whether such an action was constitutionally valid.",
+          "Sequence_of_Events": "The President of India referred the matter to the Supreme Court for an advisory opinion under Article 143. The key question was whether Parliament could transfer Indian territory to another country through legislation under Article 3 or if it required a constitutional amendment under Article 368.",
+          "Judgment": "The Supreme Court held that Parliament cannot transfer any part of India’s territory to a foreign nation through ordinary legislation under Article 3. It ruled that such a transfer required a constitutional amendment under Article 368.",
+          "Ultimate_Solution": "To implement the agreement, Parliament passed the Constitution (Ninth Amendment) Act, 1960, authorizing the cession of the Berubari Union to Pakistan."
+        },
+        {
+          "Case": "State of West Bengal v. Union of India (1962)",
+          "Background": "West Bengal challenged the authority of the central government to reorganize states, claiming that the States Reorganization Act infringed upon the federal structure of the Constitution.",
+          "Sequence_of_Events": "The Supreme Court was tasked with determining whether the central government had the power to alter state boundaries and names under Article 3 without undermining state autonomy.",
+          "Judgment": "The Court ruled that India is an indestructible union of destructible states, emphasizing that the central government holds the authority to reorganize states for administrative efficiency.",
+          "Ultimate_Solution": "The ruling reaffirmed the central government’s power under Article 3 while emphasizing the importance of federal unity."
+        }
+      ]
+    },
+    {
+      "Number": 3,
+      "Title": "Formation of New States and Alteration of Areas, Boundaries, or Names",
+      "Description": "Parliament may by law— (a) form a new State by separation, uniting, or altering boundaries; (b) increase the area of any State; (c) diminish the area of any State; (d) alter the boundaries of any State; (e) alter the name of any State.",
+      "Related_Cases": [
+        {
+          "Case": "Reorganization of Andhra Pradesh (1956)",
+          "Background": "After independence, there was widespread demand for the creation of linguistic states. The agitation for a separate Andhra state, led by Potti Sriramulu, intensified after his death following a 58-day hunger strike.",
+          "Sequence_of_Events": "Parliament enacted the States Reorganization Act, creating Andhra Pradesh as the first state based on linguistic identity. This move was aimed at addressing the cultural aspirations of Telugu-speaking people.",
+          "Judgment": "The reorganization was upheld as a constitutional exercise under Article 3.",
+          "Ultimate_Solution": "The case set a precedent for the creation of other linguistic states, shaping India’s federal structure."
+        }
+      ]
+    },
+    {
+      "Number": 11,
+      "Title": "Parliament to Regulate the Right of Citizenship by Law",
+      "Description": "Nothing in the foregoing provisions of this Part shall derogate from the power of Parliament to make any provision with respect to the acquisition and termination of citizenship and all other matters relating to citizenship.",
+      "Related_Cases": [
+        {
+          "Case": "Sarbananda Sonowal v. Union of India (2005)",
+          "Background": "The petitioner challenged the constitutionality of the Illegal Migrants (Determination by Tribunals) Act, 1983, which dealt with identifying illegal immigrants in Assam. The Act was perceived as ineffective in curbing illegal immigration from Bangladesh.",
+          "Sequence_of_Events": "Sarbananda Sonowal argued that the Act contravened the Citizenship Act, 1955, by placing a disproportionate burden of proof on Indian citizens to establish the citizenship status of alleged illegal immigrants.",
+          "Judgment": "The Supreme Court declared the IMDT Act unconstitutional, stating it violated Article 14 (equality before law) and undermined Article 11 by impeding Parliament's ability to regulate citizenship effectively.",
+          "Ultimate_Solution": "This landmark case upheld the primacy of the Citizenship Act and strengthened legal mechanisms to address illegal immigration."
+        }
+      ]
+    },
+    {
+      "Number": 14,
+      "Title": "Right to Equality before Law",
+      "Description": "The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.",
+      "Related_Cases": [
+        {
+          "Case": "E.P. Royappa v. State of Tamil Nadu (1974)",
+          "Background": "E.P. Royappa, a senior IAS officer, was transferred from his position as Chief Secretary to a less significant role. He claimed this transfer was politically motivated, arbitrary, and violated his fundamental rights under Article 14.",
+          "Sequence_of_Events": "Royappa argued that his demotion was not based on merit or administrative necessity but was arbitrary and discriminatory. The state justified the transfer, citing administrative needs.",
+          "Judgment": "The Supreme Court held that Article 14 encompasses not only discrimination but also arbitrariness. The Court stated, 'Equality is antithetical to arbitrariness,' expanding the interpretation of equality to include fairness in state actions.",
+          "Ultimate_Solution": "This case established the principle that arbitrariness in administrative decisions violates Article 14, ensuring fairness in governance."
+        }
+      ]
+    }
+  ]
+}
