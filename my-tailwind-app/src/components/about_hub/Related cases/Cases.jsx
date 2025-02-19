@@ -49,7 +49,7 @@ const Cases = () => {
           
           <div className="relative border-2 border-black w-[90%] h-[74%] mx-auto mt-3 p-4 rounded-xl ">
             {/* <Displaybox/> */}
-            <div className="overflow-y-auto max-h-[450px]">
+            <div className="overflow-y-auto max-h-[450px] scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent">
               <Case_display/>
               </div>
             
