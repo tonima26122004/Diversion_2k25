@@ -2,7 +2,7 @@ import React from 'react';
 
 const Landing_about = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-6 items-center mt-5 p-8 w-[35%]">
+    <div className="flex flex-wrap justify-center gap-6 items-center mt-5  w-[45%]">
       {/* Left side - two smaller cards */}
       <div className="flex flex-col gap-6 w-[45%]">
         <div className="bg-[#766C40] p-5 rounded-lg shadow-lg">
