@@ -31,7 +31,7 @@ const Explore = () => {
         <Card 
             image="ball.svg" 
             heading="Mega Quiz" 
-            text="Test your knowledge and reinforce learning with a comprehensive Mega Quiz at the end of your journey.  during unforeseen situations. " 
+            text="Test your knowledge and reinforce learning with a comprehensive Mega Quiz at the end of your journey.  " 
         />
 
       </div>
