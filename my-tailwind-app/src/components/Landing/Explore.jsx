@@ -3,12 +3,12 @@ import Card from './Card'
 
 const Explore = () => {
   return (
-    <div className='mt-5'>
+    <div className='mt-5 px-4'>
       <div className=''>
         <img className='' src="explore.svg" alt="" />
       </div>
 
-      <div className='flex justify-between mt-8 gap-6'>
+      <div className='flex justify-between mt-8 gap-4'>
 
         <Card 
             image="ball.svg" 
