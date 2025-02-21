@@ -45,6 +45,7 @@ const Hub = () => {
               <h1 className="text-3xl font-libra px-4 text-[#52524D] ">
                 Discover, Learn, and Live the Indian Constitution
               </h1>
+              
               <div className="border-[#766C40] border-2 w-4/6"></div>
             </div>
             <div className="flex items-center gap-4 px-3">
