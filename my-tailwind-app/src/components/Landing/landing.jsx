@@ -4,6 +4,7 @@ import Land_home from './Land_home'
 import Landing_about from './Landing_about'
 import Land_about_1 from './Land_about_1'
 import Explore from './Explore'
+import ExpandableCard from './ExpandableCard'
 
 
 
@@ -17,12 +18,13 @@ function Landing() {
       <Land_nav/>
       <Land_home/>
 
-      <div className='flex items-center'>
+      <div className='flex items-center gap-5'>
         <Landing_about/>
         <Land_about_1/>
       </div>
 
       <Explore/>
+      <ExpandableCard/>
       
     </div>
       

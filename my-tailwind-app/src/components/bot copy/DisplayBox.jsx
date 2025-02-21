@@ -54,7 +54,7 @@ const DisplayBox = ({ ans, displaybutton }) => {
                                     style={{ fontWeight: 600 }}
                                 >
                                     {msg.bot}
-                                    <div className="mt-3"><Listen/></div>
+                                    <div className="mt-3"><Listen ans={ans}/></div>
                                 </div>
                                 
                                 
