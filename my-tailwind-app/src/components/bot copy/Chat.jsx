@@ -15,17 +15,23 @@ const Chat = () => {
     const [isInputMoved, setIsInputMoved] = useState(false);
     const [que,setque]= useState('');
     const [ans,setans]=useState([]);
-
     const [Loading,setLoading]=useState(false);
-
     const [show,setshow]=useState(false);
-
     const [displaybutton,setdisplaybutton]=useState(false)
-    
     const word=['Article 1','Article 2','Article 3','Article 4','Article 5','overspeeding'];
+    const articlewords = [
+        'Article 1', 'Article 2', 'Article 3', 'Article 4', 'Article 5', 
+        'Article 6', 'Article 7', 'Article 8', 'Article 9', 'Article 10', 
+        'Article 15', 'Article 19', 'Article 21', 'Article 32', 'Article 44', 
+        'Fundamental Rights', 'Constitutional Law', 'Criminal Law', 'Civil Law', 
+        'Cyber Law', 'Human Rights Law', 'Intellectual Property Law', 'Consumer Protection Act', 
+        'Labor Laws', 'Contract Law', 'Corporate Law', 'Environmental Law', 'Property Law', 
+        'Traffic Laws', 'Speed Limits', 'Drunk Driving', 'Road Safety Rules', 'Helmet Rules', 
+        'Seat Belt Laws', 'No Parking Zones','Traffic' ,'Traffic Signals', 'Hit and Run Law', 
+        'Driving License Rules', 'Overloading Rules', 'Vehicle Insurance Law', 'Penalty for Rash Driving'
+      ];
 
-    const articlewords=['Article 1','Article 2','Article 3','Article 4','Article 5'];
-
+    
     // Toggle sidebar visibility
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
