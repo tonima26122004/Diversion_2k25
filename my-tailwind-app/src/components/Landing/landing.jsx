@@ -5,6 +5,7 @@ import Landing_about from './Landing_about'
 import Land_about_1 from './Land_about_1'
 import Explore from './Explore'
 import ExpandableCard from './ExpandableCard'
+import Faq from './Faq'
 
 
 
@@ -24,7 +25,7 @@ function Landing() {
       </div>
 
       <Explore/>
-      <ExpandableCard/>
+      <Faq/>
       
     </div>
       
