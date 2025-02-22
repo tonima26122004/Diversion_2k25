@@ -5,11 +5,99 @@ import AnimatedInputBox from './Input';
 import DisplayBox from './DisplayBox';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+
+// Load your publishable key from Stripe
+const stripePromise = loadStripe('your-publishable-key-here');
+
+// Stripe Checkout Form Component
+const CheckoutForm = () => {
+    const stripe = useStripe();
+    const elements = useElements();
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [email, setEmail] = useState('');
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (!stripe || !elements) {
+            return;
+        }
+
+        setLoading(true);
+
+        const { error, paymentMethod } = await stripe.createPaymentMethod({
+            type: 'card',
+            card: elements.getElement(CardElement),
+        });
+
+        if (error) {
+            setError(error.message);
+            setLoading(false);
+        } else {
+            // Send paymentMethod.id and email to your backend
+            const response = await fetch('http://localhost:5000/create-subscription', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    paymentMethodId: paymentMethod.id,
+                    email: email,
+                }),
+            });
+
+            const subscription = await response.json();
+
+            if (subscription.error) {
+                setError(subscription.error);
+            } else {
+                // Confirm the payment on the client side
+                const { clientSecret } = subscription;
+                const { error: confirmError } = await stripe.confirmCardPayment(clientSecret);
+
+                if (confirmError) {
+                    setError(confirmError.message);
+                } else {
+                    // Subscription successful
+                    alert('Subscription successful!');
+                }
+            }
+
+            setLoading(false);
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-libra font-semibold mb-4">Subscribe to Our Service</h2>
+            <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full p-2 mb-4 border border-gray-300 rounded-md"
+                required
+            />
+            <CardElement className="mb-4" />
+            {error && <div className="text-red-500 mb-4">{error}</div>}
+            <button
+                type="submit"
+                disabled={!stripe || loading}
+                className="w-full bg-[#766C40] text-white py-2 rounded-md hover:bg-[#5E5740] transition-all duration-300"
+            >
+                {loading ? 'Processing...' : 'Subscribe'}
+            </button>
+        </form>
+    );
+};
 
 const Chat = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [queries, setQueries] = useState([]);
-    const [displayedQueries, setDisplayedQueries] = useState([]); // New state for DisplayBox
+    const [displayedQueries, setDisplayedQueries] = useState([]);
     const [currentQuery, setCurrentQuery] = useState('');
     const [isQuerySubmitted, setIsQuerySubmitted] = useState(false);
     const [isInputMoved, setIsInputMoved] = useState(false);
@@ -30,15 +118,15 @@ const Chat = () => {
         'Seat Belt Laws', 'No Parking Zones', 'Traffic', 'Traffic Signals', 'Hit and Run Law', 
         'Driving License Rules', 'Overloading Rules', 'Vehicle Insurance Law', 'Penalty for Rash Driving',
         'What is the Right to Equality?', 'What is the Right to Freedom?', 'What is Article 21?', 
-    'What is Intellectual Property Law?', 'What is Cyber Law?', 'What is Road Safety Law?', 
-    'What is the penalty for drunk driving?', 'What is the punishment for defamation?', 
-    'What is the process of filing an FIR?', 'What is the legal drinking age in India?', 
-    'What is the punishment for domestic violence?', 'What is the law on child labor in India?', 
-    'What is the punishment for hit and run cases?', 'What is the difference between civil and criminal law?', 
-    'What is considered workplace harassment?', 'What is the punishment for data theft?', 
-    'What is a constitutional remedy?', 'What is the legal process for marriage registration?', 
-    'What is the punishment for cybercrime?', 'What is the role of the Supreme Court in India?', 
-    'What is an RTI application?', 'What is the law on social media privacy?'
+        'What is Intellectual Property Law?', 'What is Cyber Law?', 'What is Road Safety Law?', 
+        'What is the penalty for drunk driving?', 'What is the punishment for defamation?', 
+        'What is the process of filing an FIR?', 'What is the legal drinking age in India?', 
+        'What is the punishment for domestic violence?', 'What is the law on child labor in India?', 
+        'What is the punishment for hit and run cases?', 'What is the difference between civil and criminal law?', 
+        'What is considered workplace harassment?', 'What is the punishment for data theft?', 
+        'What is a constitutional remedy?', 'What is the legal process for marriage registration?', 
+        'What is the punishment for cybercrime?', 'What is the role of the Supreme Court in India?', 
+        'What is an RTI application?', 'What is the law on social media privacy?'
     ];
 
     // Toggle sidebar visibility
@@ -48,19 +136,19 @@ const Chat = () => {
 
     // Add a new query
     const addQuery = (query) => {
-        setQueries((prevQueries) => [...prevQueries, query]); // Update sidebar queries
-        setDisplayedQueries((prevDisplayed) => [...prevDisplayed, query]); // Update DisplayBox
-        setCurrentQuery(query); // Update the heading with the current query
-        setIsQuerySubmitted(true); // Mark query as submitted
-        setIsInputMoved(true); // Move the input box to the bottom
+        setQueries((prevQueries) => [...prevQueries, query]);
+        setDisplayedQueries((prevDisplayed) => [...prevDisplayed, query]);
+        setCurrentQuery(query);
+        setIsQuerySubmitted(true);
+        setIsInputMoved(true);
     };
 
     // Handle "Add New Query" button click
     const handleAddNewQueryClick = () => {
-        setDisplayedQueries([]); // Clear DisplayBox
-        setCurrentQuery(''); // Reset the heading to default
-        setIsQuerySubmitted(false); // Reset input box state
-        setIsInputMoved(false); // Reset input box position
+        setDisplayedQueries([]);
+        setCurrentQuery('');
+        setIsQuerySubmitted(false);
+        setIsInputMoved(false);
     };
 
     // Fetch answer from the API
@@ -194,6 +282,13 @@ const Chat = () => {
                     <pre className='whitespace-pre-wrap break-words overflow-x-hidden'>
                         <DisplayBox queries={displayedQueries} ans={ans} Loading={Loading} show={show} displaybutton={displaybutton} />
                     </pre>
+
+                    {/* Subscription Section */}
+                    <div className="absolute bottom-4 right-4 z-30">
+                        <Elements stripe={stripePromise}>
+                            <CheckoutForm />
+                        </Elements>
+                    </div>
                 </div>
             </div>
         </div>
