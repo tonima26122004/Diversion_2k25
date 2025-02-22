@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import React, { useState } from 'react';
 import ExpandableCard from './ExpandableCard';
-
 
 const Faq = () => {
   const [inputValue, setInputValue] = useState('');
@@ -10,63 +8,57 @@ const Faq = () => {
     setInputValue(e.target.value);
   };
 
-  const handleClear = () => {
-    setInputValue('');
-  };
-
   const handleButtonClick = () => {
     alert(`You entered: ${inputValue}`);
   };
 
   return (
-    <section className="" id="faq">
-      <div className="relative mt-24 flex justify-center">
-        <Image
-          src="/Frequently Ask Question.svg"
-          alt="hero"
-          width={1100}
-          height={500}
-        />
-        <div className="absolute inset-0 flex justify-center items-center">
-          <p className="text-black text-6xl font-bold">Frequently Ask Question</p>
-        </div>
+    <section id="faq" className="">
+      <div className="relative mt-5 flex justify-between">
+        
+        <img src="" alt="" />
       </div>
-      <p className="flex justify-center font-bold text-lg text-[#3F3F3F]">
-        <Link href="/" className="underline px-1 font-semibold">
-          CLICK HERE
-        </Link>{' '}
-        to know more
-      </p>
 
-      <div className="card flex px-24 justify-between">
+      <div className="card flex px-4 justify-between">
         <div className="w-3/5">
-          <h1 className="text-4xl font-bold mb-4">Popular Questions</h1>
+          <h1 className="text-xl font-bold font-libra mb-4">Popular Questions</h1>
           <ExpandableCard
             title="What is the purpose of this platform?"
             description=""
             extraContent="This platform is designed to streamline the management of R&D and S&T projects in the coal sector. It enables CMPDI administrators and project investigators to efficiently track progress, submit updates, and manage project documentation in one centralized system."
-            imageUrl="/Dropdown.svg"
+            imageUrl="Dropdown.svg"
           />
-         <ExpandableCard
-            title="What is the purpose of this platform?"
+          <ExpandableCard
+            title="How can I track my project updates?"
             description=""
-            extraContent="This platform is designed to streamline the management of R&D and S&T projects in the coal sector. It enables CMPDI administrators and project investigators to efficiently track progress, submit updates, and manage project documentation in one centralized system."
-            imageUrl="/Dropdown.svg"
+            extraContent="Users can log in to the platform and view real-time updates, milestones, and reports related to their projects."
+            imageUrl="Dropdown.svg"
+          />
+          <ExpandableCard
+            title="How can I track my project updates?"
+            description=""
+            extraContent="Users can log in to the platform and view real-time updates, milestones, and reports related to their projects."
+            imageUrl="Dropdown.svg"
+          />
+          <ExpandableCard
+            title="How can I track my project updates?"
+            description=""
+            extraContent="Users can log in to the platform and view real-time updates, milestones, and reports related to their projects."
+            imageUrl="Dropdown.svg"
+          />
+          <ExpandableCard
+            title="How can I track my project updates?"
+            description=""
+            extraContent="Users can log in to the platform and view real-time updates, milestones, and reports related to their projects."
+            imageUrl="Dropdown.svg"
           />
         </div>
 
-        <div className="flex flex-col">
-          <div>
-            <img src="" alt="" />
-          </div>
+        <div className="flex flex-col w-2/5 items-center">
+          <h1 className="text-center text-4xl font-semibold mt-5">Any Questions?</h1>
 
-          <div>
-            <h1 className="text-center text-4xl font-semibold mt-5">Any Question?</h1>
-          </div>
-
-          <div className="mt-5">
-            <h1 className="text-semibold">Let me know.</h1>
-
+          <div className="mt-5 w-full px-5">
+            <h2 className="text-lg font-semibold">Let me know.</h2>
             <input
               type="text"
               value={inputValue}
@@ -77,7 +69,7 @@ const Faq = () => {
             <div className="flex justify-center mt-5">
               <button
                 onClick={handleButtonClick}
-                className="bg-black text-white rounded-full px-6 py-2"
+                className="bg-black text-white rounded-full px-6 font-libra py-2"
               >
                 Send
               </button>

@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "../main copy/Nav";
 import Carousel from "./carousel";
 import LanguageDropdown from "../bot copy/Lang";
-import ExamCard from "./Examcard"; // Importing the card component
+import ExamCard from './ExamCard'; // Importing the card component
 
 const exams = [
   {

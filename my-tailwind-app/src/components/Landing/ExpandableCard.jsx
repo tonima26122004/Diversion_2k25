@@ -8,12 +8,12 @@ const ExpandableCard = ({ title, description, extraContent, imageUrl }) => {
   };
 
   return (
-    <div className="w-full max-w-xl bg-[#E6E6E6] rounded-lg shadow-lg mb-4 transition-all">
+    <div className="w-full max-w-xl bg-[#8C845E] rounded-lg shadow-lg mb-4 transition-all">
       <div className="flex px-6 py-4">
         {/* Content Section */}
         <div className="flex-1">
-          <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
-          <p className="text-gray-600 mt-2">{description}</p>
+          <h2 className="text-xl font-semibold font-libra text-[#E4E2D6]">{title}</h2>
+          <p className="text-[#E4E2D6] font-libra mt-2">{description}</p>
         </div>
 
         {/* Toggle Button */}
@@ -39,7 +39,7 @@ const ExpandableCard = ({ title, description, extraContent, imageUrl }) => {
         }`}
       >
         <div className="px-6 py-4">
-          <p className="text-gray-700">{extraContent}</p>
+          <p className=" text-[#E4E2D6] font-libra">{extraContent}</p>
         </div>
       </div>
     </div>
