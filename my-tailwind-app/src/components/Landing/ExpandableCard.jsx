@@ -8,7 +8,7 @@ const ExpandableCard = ({ title, description, extraContent, imageUrl }) => {
   };
 
   return (
-    <div className="w-full max-w-xl bg-[#8C845E] rounded-lg shadow-lg mb-4 transition-all">
+    <div className="w-full max-w-xl bg-[#766C40] rounded-lg shadow-lg mb-4 transition-all">
       <div className="flex px-6 py-4">
         {/* Content Section */}
         <div className="flex-1">

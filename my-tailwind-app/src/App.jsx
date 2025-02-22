@@ -21,14 +21,14 @@ function App() {
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Hub" element={<Hub />} />
         <Route path="/about_hub" element={<A_hub />} />
-        <Route path="/part_hub" element={<Part_hub />} />
+        <Route path="/Hub/part_hub/" element={<Part_hub />} />
         <Route path="/quiz" element={<Quiz/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
 
         {/* about_hub *Top nav* routes */}
 
-        <Route path="/Read the article" element={<A_hub a={1} />} />
+        <Route path="/Read_the_article" element={<A_hub a={1} />} />
         <Route path="/Visualize your lesson" element={<Visualize />} />
         <Route path="/Play to find way" element={<Game />} />
         <Route path="/Related cases" element={<Cases />} />

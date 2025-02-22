@@ -28,7 +28,7 @@ const Card = ({ number, title }) => {
 
       {/* Explore Button */}
       <button
-        onClick={() => navigate("/part_hub")}
+        onClick={() => navigate("/Hub/part_hub")}
         className="px-4 py-2 border w-32 flex ml-32 font-libra justify-center bg-black rounded-full text-white hover:bg-gray-800 transition"
       >
         Explore &gt;&gt;
