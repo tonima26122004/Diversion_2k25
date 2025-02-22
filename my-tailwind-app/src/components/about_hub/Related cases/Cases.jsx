@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../../main copy/Nav";
+import Nav from "../../Knowledge/part_hub/Nav";
 import LanguageDropdown from "../../bot copy/Lang";
 
 import Cases_nav from "./Cases_nav";
