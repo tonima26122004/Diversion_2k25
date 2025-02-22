@@ -28,7 +28,7 @@ function App() {
 
         {/* about_hub *Top nav* routes */}
 
-        <Route path="/Read the article" element={<A_hub />} />
+        <Route path="/Read the article" element={<A_hub a={1} />} />
         <Route path="/Visualize your lesson" element={<Visualize />} />
         <Route path="/Play to find way" element={<Game />} />
         <Route path="/Related cases" element={<Cases />} />
