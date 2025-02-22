@@ -3,11 +3,11 @@ import Nav from "../Knowledge/part_hub/Nav.jsx";
 import LanguageDropdown from "../bot copy/Lang";
 import HotCard from "./Hot_card.jsx";
 import { ChevronDown } from "lucide-react";
-<<<<<<< HEAD
+
 import { Loader2 } from "lucide-react";
-=======
+
 import SkeletonLoader from "./SkeletonLoader.jsx";
->>>>>>> cac0ed031ed3c2af94bd4221597378d963dd540e
+
 
 const Hot = () => {
 
