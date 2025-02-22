@@ -17,13 +17,13 @@ const Tracker_2 = () => {
         <div className="flex flex-col w-full gap-2 py-2">
           <div>
             {/* <img className="px-4 w-[180px]" src="Part no.svg" alt="" /> */}
-            <h1 className='text-5xl my-2 font-libra px-6'>Law Violation Tracker</h1>
+            <h1 className='text-5xl my-2 font-libra px-4'>Law Violation Tracker</h1>
           </div>
 
-          <h1 className="text-3xl font-libra px-4 text-[#52524D] ">
+          <h1 className="text-2xl font-libra px-4 text-[#52524D] ">
           Stay updated on high-risk areas and legal breaches near you.
           </h1>
-          <div className="border-[#766C40] border-2 w-[25%]"></div>
+          <div className="border-[#766C40] border-2 w-[88%]"></div>
         </div>
         <div className="flex items-center gap-4 px-3">
           <LanguageDropdown />
@@ -33,7 +33,7 @@ const Tracker_2 = () => {
         </div>
       </div>
 
-      <div className="relative border-2 border-black w-[90%] h-[74%] mx-auto mt-3 p-4 rounded-xl">
+      <div className="relative border-2 border-black w-[98%] h-[74%] mx-auto mt-3 p-4 rounded-xl">
       <h1 className="text-2xl px-4 font-libra font-semibold text-[#766C40] ">Tracking Law <a className="text-2xl font-libra text-[#65090A]" >Violations</a> Across  <a className="text-2xl font-libra text-[#65090A]" >Regions & Time in Newtown :</a>  </h1>
       </div>
     </div>

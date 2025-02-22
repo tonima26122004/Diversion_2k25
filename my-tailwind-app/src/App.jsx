@@ -11,16 +11,13 @@ import Hot from "./components/Hot_news/Hot";
 import Quiz from "./components/megaquiz/quiz";
 import Signup from "./components/Login/login";
 import Login from "./components/loginmain/loginmain";
-import Tracker from "./components/tracker/Tracker";
+// import Tracker from "./components/tracker/Tracker";
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import 'leaflet-defaulticon-compatibility';
 import Tracker_2 from "./components/tracker/Tracker_2";
-<<<<<<< HEAD
-=======
-import Tracker from "./components/tracker/Tracker"
+import Tracker from "./components/tracker/Tracker";
 import Tracker_3 from "./components/tracker/Tracker_3";
->>>>>>> 8894b9f5f09c7dfce3271cab74f0b182bfe07b23
 
 
 function App() {
