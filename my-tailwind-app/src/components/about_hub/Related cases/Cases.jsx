@@ -4,7 +4,7 @@ import LanguageDropdown from "../../bot copy/Lang";
 
 import Cases_nav from "./Cases_nav";
 
-import  { useState } from "react";
+import  { useState,useEffect } from "react";
 import Case_display from "./Case_display";
 
 
@@ -14,6 +14,47 @@ import Case_display from "./Case_display";
 
 
 const Cases = () => {
+
+
+ const [read, setRead] = useState([]);
+
+  useEffect(() => {
+    const fetch_data = async () => {
+      try {
+        const response = await fetch("/knowledge.json");
+        const result = await response.json();
+
+        if (Array.isArray(result.Articles)) {
+          setRead(result.Articles);
+        } else {
+          console.error("Data format is incorrect:", result);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetch_data();
+  }, []);
+
+  useEffect(() => {
+    if (read.length > 0) {
+      console.log(read[0].Title);
+    }
+  }, [read]);
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   return (
     <div className="relative">
@@ -50,7 +91,7 @@ const Cases = () => {
           <div className="relative border-2 border-black w-[90%] h-[74%] mx-auto mt-3 p-4 rounded-xl ">
             {/* <Displaybox/> */}
             <div className="overflow-y-auto max-h-[450px] scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent">
-              <Case_display/>
+              <Case_display read={read}/>
               </div>
             
              
