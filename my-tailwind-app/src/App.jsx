@@ -13,6 +13,7 @@ import Signup from "./components/Login/login";
 import Login from "./components/loginmain/loginmain";
 import Tracker_2 from "./components/tracker/Tracker_2";
 import Tracker from "./components/tracker/Tracker"
+import Tracker_3 from "./components/tracker/Tracker_3";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
 
         <Route path="/tracker" element={<Tracker />} />
         <Route path="/tracker2" element={<Tracker_2 />} />
+        <Route path="/tracker3" element={<Tracker_3 />} />
         
         
 
