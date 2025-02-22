@@ -3,7 +3,6 @@ import Nav from "../Knowledge/part_hub/Nav.jsx";
 import LanguageDropdown from "../bot copy/Lang";
 import HotCard from "./Hot_card.jsx";
 import { ChevronDown } from "lucide-react";
-
 import { Loader2 } from "lucide-react";
 
 import SkeletonLoader from "./SkeletonLoader.jsx";
@@ -159,16 +158,13 @@ const Hot = () => {
                     />
                   ))
                 ) : (
-<<<<<<< HEAD
-                  <div className="flex items-center border border-black px-4 py-2 rounded-lg">
+<div>  <div className="flex items-center border border-black px-4 py-2 rounded-lg">
       <Loader2 className="animate-spin w-7 h-7 mr-2" />
       <span className="font-semibold">Loading news</span>
-    </div>
-=======
-                  <p className="text-lg text-gray-700 w-full">
-                    <SkeletonLoader />
-                  </p>
->>>>>>> cac0ed031ed3c2af94bd4221597378d963dd540e
+    </div></div>
+                
+
+                 
                 )}
 
               </div>

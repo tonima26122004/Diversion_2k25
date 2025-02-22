@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Nav from '../Knowledge/part_hub/Nav';
 import LanguageDropdown from '../bot copy/Lang';
 import Tracker_nav from './Tracker_nav';
-import Map_display from './Map_display';
+import Map from './Map_display'; // Import the updated Map component
 
 const Tracker = () => {
   const [city, setCity] = useState('kolkata');
@@ -61,7 +61,9 @@ const Tracker = () => {
                 </div>
               </div>
 
-              <div><Map_display /></div>
+              <div style={{ height: '500px', width: '100%' }}>
+                <Map city={city} state={state} />
+              </div>
             </div>
           </div>
         </div>

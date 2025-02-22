@@ -1,36 +1,69 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React, { useEffect } from "react";
+import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
-import 'leaflet-defaulticon-compatibility';
 
-// Custom marker icon
-const customIcon = new L.Icon({
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-  shadowSize: [41, 41],
-});
+// Custom Marker with Label
+const CustomMarkerWithLabel = ({ position, city, state }) => {
+  const map = useMap();
 
-const Map_display = () => {
-  const position = [22.5726, 88.3639]; // Coordinates for Kolkata
+  useEffect(() => {
+    // Create a custom icon for the marker (optional)
+    const icon = L.icon({
+      iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', // Default Leaflet marker icon
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+    });
+
+    // Create a marker with a custom label
+    const marker = L.marker(position, { icon }).addTo(map);
+
+    // Create a custom label with inline styles
+    const label = L.divIcon({
+      className: 'custom-label', // CSS class for styling (optional, can be removed)
+      html: `
+        <div style="
+          background-color: white;
+          padding: 4px 8px;
+          border-radius: 4px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          white-space: nowrap;
+        ">
+          View The Law Violation Data
+        </div>
+      `,
+      iconSize: [100, 20], // Adjust size of the label
+      iconAnchor: [0, 0], // Position the label relative to the marker
+    });
+
+    // Add the label to the map at the same position as the marker
+    L.marker(position, { icon: label, zIndexOffset: 1000 }).addTo(map);
+
+    // Cleanup on unmount
+    return () => {
+      map.removeLayer(marker);
+      map.removeLayer(label);
+    };
+  }, [map, position]);
+
+  return null;
+};
+
+const Map = ({ city, state }) => {
+  const position = [22.5726, 88.3639]; 
 
   return (
-    <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
+    <MapContainer center={position} zoom={13} style={{ height: '60%', width: '60%',display:'flex', justifyContent:'center'}}>
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={position} icon={customIcon}>
-        <Popup>
-          Kolkata, West Bengal <br /> Law violation data here.
-        </Popup>
-      </Marker>
+      <CustomMarkerWithLabel position={position} city={city} state={state} />
     </MapContainer>
   );
 };
 
-export default Map_display;
+export default Map;
