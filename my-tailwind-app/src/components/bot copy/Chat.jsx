@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Nav from '../main copy/Nav';
+import Nav from '../Knowledge/part_hub/Nav';
 import LanguageDropdown from './Lang';
 import AnimatedInputBox from './Input';
 import DisplayBox from './DisplayBox';
@@ -71,7 +71,7 @@ const Chat = () => {
           data: {
             "contents": [{
               "parts": [{
-                "text": `${que} Provide a clear,give the answer in circle bullet(medium size with filled) in point-wise  answer using proper line breaks and ensuring each point starts on a new line. Use full sentences and separate each point clearly.don't give any star in answer`
+                "text": `${que} Provide a clear,give the answer in circle bullet(medium size with filled) in point-wise  answer using proper line breaks and ensuring each point starts on a new line. Use full sentences and separate each point clearly.don't give any star in answer.give answer within 30 words`
       }]
             }]
           }

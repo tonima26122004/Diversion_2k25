@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Nav from "../main copy/Nav";
+import Nav from "./part_hub/Nav";
 import LanguageDropdown from '../bot copy/Lang';
 import TopNav from "./topnav";
 import Card from "./part";
@@ -29,6 +29,7 @@ const Hub = () => {
   const handleCardClick = (title) => {
     alert(`Explore button clicked for: ${title}`);
   };
+ 
 
   return (
     <div className="relative">
