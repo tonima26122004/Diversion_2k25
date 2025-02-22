@@ -9,7 +9,6 @@ const Part_hub = () => {
         <Nav />
 
         <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative p-6 flex flex-col items-start overflow-y-auto">
-
           {/* Heading */}
           <div className="flex w-full">
             <div className="flex flex-col w-full gap-2 py-2">
@@ -31,7 +30,7 @@ const Part_hub = () => {
           </div>
 
           {/* Scrollable Article Cards */}
-          <div className="mt-4  space-y-4 overflow-y-auto  ml-12">
+          <div className="mt-4 space-y-4 ml-12">
             <div className="flex space-x-36">
               <ArticleCard
                 articleNumber={1}
@@ -58,7 +57,9 @@ const Part_hub = () => {
                 casesUrl="/cases"
               />
             </div>
-            <div className="flex justify-start space-x-36">
+            </div>
+            <div className="mt-4 space-y-4 ml-12">
+            <div className="flex space-x-36">
               <ArticleCard
                 articleNumber={1}
                 articleName="Name and territory of the Union"
@@ -67,9 +68,10 @@ const Part_hub = () => {
                 playUrl="/play"
                 casesUrl="/cases"
               />
+               
+               
             </div>
           </div>
-
         </div>
       </div>
     </div>
