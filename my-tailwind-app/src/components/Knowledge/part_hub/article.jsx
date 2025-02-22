@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArticleCard = ({ articleNumber, articleName, readUrl, visualizeUrl, playUrl, casesUrl }) => {
+const ArticleCard = ({ articleNumber, articleName, readUrl}) => {
   return (
     <div className="relative flex flex-col items-center font-libra p-6 rounded-lg max-w-xs mx-auto">
       
@@ -21,17 +21,9 @@ const ArticleCard = ({ articleNumber, articleName, readUrl, visualizeUrl, playUr
       {/* Buttons */}
       <div className="flex flex-col space-y-2 w-full items-center">
         <a href={"/Read the article"} className="bg-black text-white text-md font-medium py-1 px-2 rounded-full text-center transition-all duration-300 hover:bg-gray-800 inline-block">
-          Read the article
+          Read the article and more
         </a>
-        <a href={visualizeUrl} className="bg-black text-white text-md font-medium py-1 px-2 rounded-full text-center transition-all duration-300 hover:bg-gray-800 inline-block">
-          Visualize your lesson
-        </a>
-        <a href={playUrl} className="bg-black text-white text-md font-medium py-1 px-2 rounded-full text-center transition-all duration-300 hover:bg-gray-800 inline-block">
-          Play to find way
-        </a>
-        <a href={casesUrl} className="bg-black text-white text-md font-medium py-1 px-2 rounded-full text-center transition-all duration-300 hover:bg-gray-800 inline-block">
-          Related cases
-        </a>
+       
       </div>
 
       {/* Bottom Design */}

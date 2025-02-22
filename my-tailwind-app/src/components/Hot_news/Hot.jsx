@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Nav from "../main copy/Nav";
+import Nav from "../Knowledge/part_hub/Nav.jsx";
 import LanguageDropdown from "../bot copy/Lang";
 import HotCard from "./Hot_card.jsx";
 import { ChevronDown } from "lucide-react";
@@ -15,7 +15,7 @@ const Hot = () => {
   const fetchNews = async () => {
       
     const res = await fetch(
-      `https://newsapi.org/v2/everything?q=${selectedCategory}&from=2025-2-16&sortBy=publishedAt&apiKey=52c8562a09804547856d91128eee3af1`
+      `https://newsapi.org/v2/everything?q=${selectedCategory}&from=2025-2-22&sortBy=publishedAt&apiKey=52c8562a09804547856d91128eee3af1`
     );
     const data = await res.json();
     setNews(data.articles); 
