@@ -13,12 +13,12 @@ const Chat = () => {
     const [currentQuery, setCurrentQuery] = useState('');
     const [isQuerySubmitted, setIsQuerySubmitted] = useState(false);
     const [isInputMoved, setIsInputMoved] = useState(false);
-    const [que,setque]= useState('');
-    const [ans,setans]=useState([]);
-    const [Loading,setLoading]=useState(false);
-    const [show,setshow]=useState(false);
-    const [displaybutton,setdisplaybutton]=useState(false)
-    const word=['Article 1','Article 2','Article 3','Article 4','Article 5','overspeeding'];
+    const [que, setque] = useState('');
+    const [ans, setans] = useState([]);
+    const [Loading, setLoading] = useState(false);
+    const [show, setshow] = useState(false);
+    const [displaybutton, setdisplaybutton] = useState(false);
+    const word = ['Article 1', 'Article 2', 'Article 3', 'Article 4', 'Article 5', 'overspeeding'];
     const articlewords = [
         'Article 1', 'Article 2', 'Article 3', 'Article 4', 'Article 5', 
         'Article 6', 'Article 7', 'Article 8', 'Article 9', 'Article 10', 
@@ -27,11 +27,20 @@ const Chat = () => {
         'Cyber Law', 'Human Rights Law', 'Intellectual Property Law', 'Consumer Protection Act', 
         'Labor Laws', 'Contract Law', 'Corporate Law', 'Environmental Law', 'Property Law', 
         'Traffic Laws', 'Speed Limits', 'Drunk Driving', 'Road Safety Rules', 'Helmet Rules', 
-        'Seat Belt Laws', 'No Parking Zones','Traffic' ,'Traffic Signals', 'Hit and Run Law', 
-        'Driving License Rules', 'Overloading Rules', 'Vehicle Insurance Law', 'Penalty for Rash Driving'
-      ];
+        'Seat Belt Laws', 'No Parking Zones', 'Traffic', 'Traffic Signals', 'Hit and Run Law', 
+        'Driving License Rules', 'Overloading Rules', 'Vehicle Insurance Law', 'Penalty for Rash Driving',
+        'What is the Right to Equality?', 'What is the Right to Freedom?', 'What is Article 21?', 
+    'What is Intellectual Property Law?', 'What is Cyber Law?', 'What is Road Safety Law?', 
+    'What is the penalty for drunk driving?', 'What is the punishment for defamation?', 
+    'What is the process of filing an FIR?', 'What is the legal drinking age in India?', 
+    'What is the punishment for domestic violence?', 'What is the law on child labor in India?', 
+    'What is the punishment for hit and run cases?', 'What is the difference between civil and criminal law?', 
+    'What is considered workplace harassment?', 'What is the punishment for data theft?', 
+    'What is a constitutional remedy?', 'What is the legal process for marriage registration?', 
+    'What is the punishment for cybercrime?', 'What is the role of the Supreme Court in India?', 
+    'What is an RTI application?', 'What is the law on social media privacy?'
+    ];
 
-    
     // Toggle sidebar visibility
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -54,73 +63,41 @@ const Chat = () => {
         setIsInputMoved(false); // Reset input box position
     };
 
-
-
-
-
-
-
-
-
-
+    // Fetch answer from the API
     async function getans() {
         setLoading(true);
         const response = await axios({
-          url: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyB2PIbL4OzhuqOoS-Agc-OL_JlUnxrw9Kg',
-          method: 'post',
-          data: {
-            "contents": [{
-              "parts": [{
-                "text": `${que} Provide a clear,give the answer in circle bullet(medium size with filled) in point-wise  answer using proper line breaks and ensuring each point starts on a new line. Use full sentences and separate each point clearly.don't give any star in answer.give answer within 30 words`
-      }]
-            }]
-          }
+            url: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyB2PIbL4OzhuqOoS-Agc-OL_JlUnxrw9Kg',
+            method: 'post',
+            data: {
+                "contents": [{
+                    "parts": [{
+                        "text": `${que} According to the constitution of India. Provide a clear,give the answer in circle bullet(medium size with filled) in point-wise  answer using proper line breaks, bullets and ensuring each point starts on a new line. Use full sentences and separate each point clearly.don't give any asterisks in answer.give answer within 60 words`
+                    }]
+                }]
+            }
         });
         setans([
-          ...ans,
-          { user: que, bot: response['data']['candidates'][0]['content']['parts'][0]['text'] }
+            ...ans,
+            { user: que, bot: response['data']['candidates'][0]['content']['parts'][0]['text'] }
         ]);
         setLoading(false);
         setque('');
         setshow(true);
         const headword = word.filter(n => que.includes(n));
-        // console.log(response['data']['candidates'][0]['content']['parts'][0]['text'])
         setCurrentQuery(headword);
         forbutton();
-        
-      }
+    }
 
-      
-
-      function forbutton(){
+    // Check if the query contains specific keywords to show the "Read More" button
+    function forbutton() {
         const check = articlewords.some(word => que.includes(word));
-        if(check)
-        {
+        if (check) {
             setdisplaybutton(true);
-        }
-        else{
+        } else {
             setdisplaybutton(false);
         }
-      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
     return (
         <div className="relative">
@@ -163,7 +140,7 @@ const Chat = () => {
                             <span>{isSidebarOpen ? 'Close Previous' : 'Check Previous'}</span>
                         </button>
                     </div>
-                                
+
                     {/* Sidebar Section */}
                     <div
                         className={`absolute right-0 bottom-0 h-[88%] w-[20%] bg-[#766C40] rounded-l-xl shadow-lg transform transition-transform duration-300 z-20 ${
@@ -197,19 +174,27 @@ const Chat = () => {
                         className={`flex flex-col justify-center items-center absolute gap-5 transition-[width] duration-700 ${
                             isInputMoved ? 'bottom-4 w-[90%]' : 'top-[50%] w-[56%]'
                         } left-1/2 transform -translate-x-1/2 z-10`}
-                        >
+                    >
                         {!isQuerySubmitted && (
                             <h1 className="text-5xl font-libra font-medium text-[#52524D]">
-                            Enter your query here.
+                                Enter your query here.
                             </h1>
                         )}
-                        <AnimatedInputBox addQuery={addQuery} getans={getans} setque={setque} que={que} setIsQuerySubmitted={setIsQuerySubmitted} setIsInputMoved={setIsInputMoved}/>
+                        <AnimatedInputBox
+                            addQuery={addQuery}
+                            getans={getans}
+                            setque={setque}
+                            que={que}
+                            setIsQuerySubmitted={setIsQuerySubmitted}
+                            setIsInputMoved={setIsInputMoved}
+                        />
                     </div>
 
-
                     {/* Display Box Section */}
-                  <pre className='whitespace-pre-wrap break-words overflow-x-hidden'>  <DisplayBox queries={displayedQueries} ans={ans} Loading={Loading} show={show}  displaybutton={displaybutton} />
-                  </pre> </div>
+                    <pre className='whitespace-pre-wrap break-words overflow-x-hidden'>
+                        <DisplayBox queries={displayedQueries} ans={ans} Loading={Loading} show={show} displaybutton={displaybutton} />
+                    </pre>
+                </div>
             </div>
         </div>
     );

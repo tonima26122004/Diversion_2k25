@@ -11,7 +11,7 @@ import About_nav from "./read_nav";
 
 const A_hub = () => {
   const [read, setRead] = useState([]);
-  const [articleNo, setArticleNo] = useState(1); // Example article number (can be dynamic)
+  const [articleNo, setArticleNo] = useState(1);
 
   useEffect(() => {
     const fetch_data = async () => {
