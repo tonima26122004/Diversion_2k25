@@ -12,7 +12,10 @@ import Quiz from "./components/megaquiz/quiz";
 import Signup from "./components/Login/login";
 import Login from "./components/loginmain/loginmain";
 import Tracker from "./components/tracker/Tracker";
+import 'leaflet/dist/leaflet.css';
 
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
+import 'leaflet-defaulticon-compatibility';
 
 function App() {
   return (

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from "react";
 import Nav from "../Knowledge/part_hub/Nav";
@@ -6,10 +5,9 @@ import Nav from "../Knowledge/part_hub/Nav";
 import  { useState, useEffect } from "react";
 
 
-=======
-import React, { useState, useEffect } from "react";
-import Nav from "../Knowledge/part_hub/Nav";
->>>>>>> b77d94faec3d1deb279992ca6a2675e2bbb8a5e8
+
+
+
 import LanguageDropdown from "../bot copy/Lang";
 import Displaybox from "./Displaybox";
 import About_nav from "./read_nav";
