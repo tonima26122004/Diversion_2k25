@@ -54,7 +54,9 @@ const Faq = () => {
           />
         </div>
 
-        <div className="flex flex-col w-2/5 items-center">
+        <div className="flex flex-col w-2/5 items-center border-2 border-[#766C40]">
+        <div><img src="ask.svg" alt="" /></div>
+        
           <h1 className="text-center text-4xl font-semibold mt-5">Any Questions?</h1>
 
           <div className="mt-5 w-full px-5">
