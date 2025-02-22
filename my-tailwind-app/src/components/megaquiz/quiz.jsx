@@ -59,17 +59,18 @@ const Quiz = () => {
         <h2 className="text-3xl font-libra px-4 text-[#5A2D0C] mt-8 ml-2">
           Some <span className="text-red-800 font-bold">top examinations</span> of INDIA:
         </h2>
-        <div className="flex flex-wrap gap-4 mt-4 ml-5">
+        <div className="flex overflow-x-auto gap-4 mt-4 ml-5 scrollbar-thin scrollbar-thumb-[#766C40] scrollbar-track-[#E4E2D6]">
           {exams.map((exam, index) => (
             <ExamCard key={index} category={exam.category} title={exam.title} description={exam.description} />
           ))}
         </div>
+        
         <h2 className="text-3xl font-libra px-4 text-black mt-8 ml-2">
-        Design Your <span className="text-red-800 font-bold">Ultimate Quiz with AI Suggestions</span> 
+          Design Your <span className="text-red-800 font-bold">Ultimate Quiz with AI Suggestions</span> 
         </h2>
         <div className="w-[170px] h-[150px] flex flex-col justify-center items-center bg-[#766C40] rounded-xl ml-6 mt-4">
-        <img src="plus.svg" alt="Preamble" className="w-12 border-4 border-white h-auto rounded-xl p-2 "/>
-        <div className="text-white text-lg font-libra mt-4">Create Quiz</div>
+          <img src="plus.svg" alt="Preamble" className="w-12 border-4 border-white h-auto rounded-xl p-2"/>
+          <div className="text-white text-lg font-libra mt-4">Create Quiz</div>
         </div>
       </div>
     </div>
