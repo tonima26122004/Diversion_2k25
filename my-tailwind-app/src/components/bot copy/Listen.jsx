@@ -10,7 +10,7 @@ const Listen = ({ ans }) => {
     const text = ans[0].bot.trim();
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/generate-speech", {
+      const response = await fetch("https://6b3d-2409-40e0-5f-860a-1856-6666-5551-a010.ngrok-free.app/generate-speech", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text }),

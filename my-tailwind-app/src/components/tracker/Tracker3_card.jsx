@@ -13,7 +13,7 @@ const Tracker3_card= ({ title, date, content, onLearnMore }) => {
       <div className="w-[65%] flex flex-col justify-between">
         <div className="flex justify-end">
           <button onClick={onLearnMore} className="p-2 w-14 transition">
-            <img src="hot_card_more.svg" alt="Learn More" />
+            {/* <img src="hot_card_more.svg" alt="Learn More" /> */}
           </button>
         </div>
         <p className="text-sm font-libra text-gray-700 break-words">{content}</p>

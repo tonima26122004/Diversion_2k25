@@ -37,13 +37,13 @@ const Nav = () => {
         { src: "hub1.svg", label: "Knowledge Hub", route: "/Hub" },
         { src: "bot.svg", label: "Legal Aid Bot", route: "/Chat" },
         { src: "Mega_quiz1.svg", label: "Mega Quiz", route: "/quiz" },
-        { src: "bot2.svg", label: "Legal Hotspots", route: "/quiz" },
+        { src: "bot2.svg", label: "Legal Hotspots", route: "/tracker" },
         { src: "news.svg", label: "Hot News", route: "/news" } // Reduced size for Hot News
       ].map((item, index) => (
         <button
           key={index}
           className={`relative z-10  w-full flex flex-col  items-center  p-2 ${
-            activeButton === index ? 'bg-[#d7d5c6a3]' : ''
+            activeButton === index ? 'bg-[#d7d5c6a3]  border-white border-l-4 ' : ''
           }`}
           onClick={() => handleButtonClick(index, item.route)}
         >

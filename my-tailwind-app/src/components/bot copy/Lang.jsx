@@ -39,8 +39,14 @@ const LanguageDropdown = () => {
   };
 
   return (
+    
     <div className="relative inline-block font-libra text-left">
+      <div className='flex gap-4'>
       {/* Dropdown Button */}
+      <button className='flex items-center w-36 gap-1 border-2 border-red-900 text-red-900  px-1 py-2 font-libra rounded-full text-lg'>
+      Get Premium 
+      <img src="star.svg" alt="Premium" className='w-4'/>
+      </button>
       <button
         onClick={toggleDropdown}
         className="flex items-center justify-between px-4 py-2 border-2 border-black rounded-md shadow-sm bg-transparent w-60"
@@ -77,7 +83,7 @@ const LanguageDropdown = () => {
     </div>
 )}
 
-
+</div>
     </div>
   );
 };

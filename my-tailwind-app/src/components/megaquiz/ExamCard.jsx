@@ -1,6 +1,18 @@
 import React from 'react';
 
 const ExamCard = ({ category, title, description }) => {
+
+    const pdfdownload = () => {
+        const pdfUrl = "upscpaper.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "paper.pdf"; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+
     return (
         <div className="w-[250px] md:w-[300px] bg-gradient-to-b from-[#8b7331] to-[#A89B78] text-black p-4 rounded-xl shadow-md font-libra flex flex-col">
             <h4 className="text-sm font-semibold text-black mb-1">{category}</h4>
@@ -13,7 +25,7 @@ const ExamCard = ({ category, title, description }) => {
                 Start Solving &gt;&gt;
             </button>
             <p className="text-md mt-2 text-white">Previous year Question-papers with solutions</p>
-            <button className="bg-black text-white px-4 py-2 w-36 rounded-3xl text-sm flex items-center gap-2 mt-2 hover:bg-gray-800 transition">
+            <button className="bg-black text-white px-4 py-2 w-36 rounded-3xl text-sm flex items-center gap-2 mt-2 hover:bg-gray-800 transition" onClick={pdfdownload}>
                 View Papers &gt;&gt;
             </button>
         </div>
