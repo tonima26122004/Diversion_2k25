@@ -39,25 +39,19 @@ const Part_hub = ({ partnumber}) => {
                 articleNumber={1}
                 articleName="Name and territory of the Union"
                 readUrl="/Read the article"
-                visualizeUrl="/visualize"
-                playUrl="/play"
-                casesUrl="/cases"
+                
               />
               <ArticleCard
                 articleNumber={1}
                 articleName="Name and territory of the Union"
                 readUrl="/read-article"
-                visualizeUrl="/visualize"
-                playUrl="/play"
-                casesUrl="/cases"
+               
               />
               <ArticleCard
                 articleNumber={1}
                 articleName="Name and territory of the Union"
                 readUrl="/read-article"
-                visualizeUrl="/visualize"
-                playUrl="/play"
-                casesUrl="/cases"
+                
               />
             </div>
             </div>
@@ -67,9 +61,7 @@ const Part_hub = ({ partnumber}) => {
                 articleNumber={1}
                 articleName="Name and territory of the Union"
                 readUrl="/read-article"
-                visualizeUrl="/visualize"
-                playUrl="/play"
-                casesUrl="/cases"
+                
               />
                
                
