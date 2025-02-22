@@ -22,10 +22,10 @@ const Nav = () => {
   }, []);
 
   return (
-    <div className="w-[11%] h-full flex flex-col items-center gap-6 relative">
+    <div className="w-[15%] h-full flex flex-col items-center  gap-6 relative">
       {/* Focus box without animation */}
       <div
-        className="absolute w-32 h-32 rounded-xl"
+        className="absolute w-full h-32 rounded-xl"
         style={{
           transform: `translateY(${activeButton * 10}rem)`,
         }}
@@ -33,23 +33,26 @@ const Nav = () => {
 
       {/* Navigation Buttons */}
       {[
-        { src: "logo_1.svg", label: "Home", route: "/" },
-        { src: "hub.svg", label: "Knowledge Hub", route: "/Hub" },
+        { src: "logo_1.svg", route: "/" , imgSize: "w-32"},
+        { src: "hub1.svg", label: "Knowledge Hub", route: "/Hub" },
         { src: "bot.svg", label: "Legal Aid Bot", route: "/Chat" },
-        { src: "Mega_quiz.svg", label: "Mega Quiz", route: "/quiz" },
-        { src: "Hot_news.svg", label: "Hot News", route: "/news", imgSize: "w-12" } // Reduced size for Hot News
+        { src: "Mega_quiz1.svg", label: "Mega Quiz", route: "/quiz" },
+        { src: "bot2.svg", label: "Legal Hotspots", route: "/quiz" },
+        { src: "news.svg", label: "Hot News", route: "/news" } // Reduced size for Hot News
       ].map((item, index) => (
         <button
           key={index}
-          className={`relative z-10 w-28 h-28 flex flex-col justify-center items-center rounded-xl ${
+          className={`relative z-10  w-full flex flex-col  items-center  p-2 ${
             activeButton === index ? 'bg-[#d7d5c6a3]' : ''
           }`}
           onClick={() => handleButtonClick(index, item.route)}
         >
-          <img className={item.imgSize || "w-20"} src={item.src} alt={item.label} />
-          <h1 className={activeButton === index ? 'text-black' : 'text-white'}>
+          <div className='flex w-full p-2'>
+          <img className={item.imgSize || "w-8 mr-2"} src={item.src} alt={item.label} />
+          <h1 className={activeButton === index ? 'text-red-900 font-libra' : 'text-white font-libra'}>
             {item.label}
           </h1>
+          </div>
         </button>
       ))}
     </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Nav from "../main copy/Nav";
+import Nav from "../Knowledge/part_hub/Nav";
 import LanguageDropdown from "../bot copy/Lang";
 import Displaybox from "./Displaybox";
 import About_nav from "./read_nav";
@@ -41,7 +41,7 @@ const A_hub = () => {
               </div>
 
               <h1 className="text-3xl font-libra px-4 text-[#52524D]">
-                {read.length > 0 ? `“${read[0].Title}”` : "Loading..."}
+                {read.length > 0 ? `${read[0].Title}` : "Loading..."}
               </h1>
               <div className="border-[#766C40] border-2 w-[25%]"></div>
             </div>
