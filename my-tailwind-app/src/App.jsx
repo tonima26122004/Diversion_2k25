@@ -11,7 +11,12 @@ import Hot from "./components/Hot_news/Hot";
 import Quiz from "./components/megaquiz/quiz";
 import Signup from "./components/Login/login";
 import Login from "./components/loginmain/loginmain";
+<<<<<<< HEAD
 import Tracker from "./components/tracker/Tracker";
+=======
+import Tracker_2 from "./components/tracker/Tracker_2";
+import Tracker from "./components/tracker/Tracker"
+>>>>>>> eb95ea02b49d2eeffd77938ceb5394d52e99af57
 
 
 function App() {
@@ -38,6 +43,9 @@ function App() {
         {/* hot news */}
 
         <Route path="/news" element={<Hot />} />
+
+        <Route path="/tracker" element={<Tracker />} />
+        <Route path="/tracker2" element={<Tracker_2 />} />
         
         
 
