@@ -43,7 +43,7 @@ const Nav = () => {
         <button
           key={index}
           className={`relative z-10  w-full flex flex-col  items-center  p-2 ${
-            activeButton === index ? 'bg-[#d7d5c6a3]' : ''
+            activeButton === index ? 'bg-[#d7d5c6a3]  border-white border-l-4 ' : ''
           }`}
           onClick={() => handleButtonClick(index, item.route)}
         >

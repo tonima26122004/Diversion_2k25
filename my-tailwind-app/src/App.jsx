@@ -11,11 +11,19 @@ import Hot from "./components/Hot_news/Hot";
 import Quiz from "./components/megaquiz/quiz";
 import Signup from "./components/Login/login";
 import Login from "./components/loginmain/loginmain";
+
 import Tracker from "./components/tracker/Tracker";
 import 'leaflet/dist/leaflet.css';
 
+<<<<<<< HEAD
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import 'leaflet-defaulticon-compatibility';
+=======
+import Tracker_2 from "./components/tracker/Tracker_2";
+
+
+
+>>>>>>> cac0ed031ed3c2af94bd4221597378d963dd540e
 
 function App() {
   return (
@@ -25,7 +33,8 @@ function App() {
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Hub" element={<Hub />} />
         <Route path="/about_hub" element={<A_hub />} />
-        <Route path="part_hub/" element={<Part_hub />} />
+<Route path="/part_hub" element={<Part_hub />} />
+
         <Route path="/quiz" element={<Quiz/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
@@ -41,6 +50,9 @@ function App() {
         {/* hot news */}
 
         <Route path="/news" element={<Hot />} />
+
+        <Route path="/tracker" element={<Tracker />} />
+        <Route path="/tracker2" element={<Tracker_2 />} />
         
         
 
