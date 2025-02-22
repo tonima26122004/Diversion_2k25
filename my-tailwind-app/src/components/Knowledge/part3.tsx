@@ -28,7 +28,7 @@ const Card3 = ({ number, title, onExplore }) => {
 
       {/* Explore Button */}
       <button
-        onClick={onExplore} // Use the onExplore prop
+       onClick={onExplore}// Use the onExplore prop
         className="px-4 py-2 border w-32 flex ml-32 font-libra justify-center bg-black rounded-full text-white hover:bg-gray-800 transition"
       >
         Explore &gt;&gt;
