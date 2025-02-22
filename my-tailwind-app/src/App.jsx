@@ -16,6 +16,11 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import 'leaflet-defaulticon-compatibility';
 import Tracker_2 from "./components/tracker/Tracker_2";
+<<<<<<< HEAD
+=======
+import Tracker from "./components/tracker/Tracker"
+import Tracker_3 from "./components/tracker/Tracker_3";
+>>>>>>> 8894b9f5f09c7dfce3271cab74f0b182bfe07b23
 
 
 function App() {
@@ -46,6 +51,7 @@ function App() {
 
         <Route path="/tracker" element={<Tracker />} />
         <Route path="/tracker2" element={<Tracker_2 />} />
+        <Route path="/tracker3" element={<Tracker_3 />} />
         
         
 
