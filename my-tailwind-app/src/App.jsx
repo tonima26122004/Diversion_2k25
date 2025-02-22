@@ -23,7 +23,7 @@ function App() {
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Hub" element={<Hub />} />
         <Route path="/about_hub" element={<A_hub />} />
-        <Route path="/Hub/part_hub/" element={<Part_hub />} />
+        <Route path="part_hub" element={<Part_hub />} />
         <Route path="/quiz" element={<Quiz/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
