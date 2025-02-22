@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Nav from '../main copy/Nav';
+import Nav from '../Knowledge/part_hub/Nav';
 import LanguageDropdown from './Lang';
 import AnimatedInputBox from './Input';
 import DisplayBox from './DisplayBox';

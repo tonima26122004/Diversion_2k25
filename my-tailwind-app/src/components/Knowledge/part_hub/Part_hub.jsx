@@ -1,28 +1,31 @@
 import React from "react";
 import Nav from "./Nav";
 import ArticleCard from "./article";
-
-const Part_hub = () => {
+import LanguageDropdown from "../../bot copy/Lang";
+const partnumber = ["1"]
+const Part_hub = ({ partnumber}) => {
   return (
     <div className="">
       <div className="bg-[#766C40] h-screen w-screen overflow-y-scroll flex items-center justify-between relative">
         <Nav />
 
-        <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative p-6 flex flex-col items-start overflow-y-auto">
+        <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative  flex flex-col items-start overflow-y-auto">
           {/* Heading */}
           <div className="flex w-full">
             <div className="flex flex-col w-full gap-2 py-2">
-              <div>
-                <img className="px-4 w-[180px]" src="Part no.svg" alt="Part Number" />
+              <div className="border-2 border-black ml-4 rounded-full w-32 p-2">
+              <div className="flex items-center justify-center gap-4 font-libra text-3xl p-1 border-2 border-black rounded-full w-28 text-red-950">
+                Part:1
               </div>
-
-              <h1 className="text-3xl font-libra px-4 text-[#52524D]">
+              </div>
+              <h1 className="text-3xl font-libra px-4 text-black">
                 “Name and territory of the Union”
               </h1>
-              <div className="border-[#766C40] border-2 w-[25%]"></div>
+              <div className="border-[#766C40] border-2 felx justify-start w-[45%]"></div>
             </div>
 
             <div className="flex items-center gap-4 px-3">
+              <LanguageDropdown />
               <button>
                 <img className="w-32" src="User.svg" alt="User Profile" />
               </button>
