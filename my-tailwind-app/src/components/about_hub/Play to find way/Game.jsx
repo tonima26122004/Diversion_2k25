@@ -18,7 +18,7 @@ Alex: But ....... sir ...... what shall I do now?`;
 
   return (
     <div className="relative">
-      <div className="bg-[#766C40] h-screen w-screen flex items-center justify-between relative">
+      <div className="bg-[#766C40] h-screen w-full flex items-center justify-between relative">
         <Nav />
 
         <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative overflow-y-scroll">
@@ -57,7 +57,7 @@ Alex: But ....... sir ...... what shall I do now?`;
                   src="playtofind.svg"
                   alt="displaybox"
                 />
-                <div className="font-libra text-3xl mt-12 w-full">
+                <div className="font-libra text-2xl mt-12 w-full">
                   {questionText.split("\n").map((line, index) => (
                     <div key={index}>{line}</div>
                   ))}
@@ -75,10 +75,11 @@ Alex: But ....... sir ...... what shall I do now?`;
 
               {/* Display answered questions side by side */}
              
-            </div>
+          
 
             {/* Input Box (connected to numpad) */}
             <InputBox onAnswerSubmit={handleAnswerSubmit} />
+            </div>
           </div>
         </div>
       </div>

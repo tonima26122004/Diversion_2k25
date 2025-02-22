@@ -20,7 +20,7 @@ const ArticleCard = ({ articleNumber, articleName, readUrl, visualizeUrl, playUr
 
       {/* Buttons */}
       <div className="flex flex-col space-y-2 w-full items-center">
-        <a href={readUrl} className="bg-black text-white text-md font-medium py-1 px-2 rounded-full text-center transition-all duration-300 hover:bg-gray-800 inline-block">
+        <a href={"/Read the article"} className="bg-black text-white text-md font-medium py-1 px-2 rounded-full text-center transition-all duration-300 hover:bg-gray-800 inline-block">
           Read the article
         </a>
         <a href={visualizeUrl} className="bg-black text-white text-md font-medium py-1 px-2 rounded-full text-center transition-all duration-300 hover:bg-gray-800 inline-block">

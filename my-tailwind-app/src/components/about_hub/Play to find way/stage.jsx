@@ -54,10 +54,10 @@ const InputBox = ({ onAnswerSubmit }) => {
         <>
           {/* Input Box */}
           <div className="flex items-center mb-4">
-            <span className="text-3xl font-semibold text-[#6f1818] mr-2">
+            <span className="text-2xl font-semibold text-[#6f1818] mr-2">
               {stages[stageIndex]}:
             </span>
-            <div className="border-2 border-[#4B0F0F] rounded-md text-2xl font-semibold w-32 h-12 flex items-center justify-center bg-transparent">
+            <div className="border-2 border-[#4B0F0F] rounded-md text-2xl font-semibold w-32 h-10 flex items-center justify-center bg-transparent">
               {inputValue || "_"}
             </div>
           </div>
@@ -69,7 +69,7 @@ const InputBox = ({ onAnswerSubmit }) => {
           <div className="flex gap-4 mt-4">
             <button
               onClick={handlePreviousStage}
-              className={`px-4 py-2 bg-transparent border-2 border-black text-black font-semibold rounded-md shadow-md ${
+              className={`px-4 py-1 bg-transparent border-2 border-black text-black font-semibold rounded-md shadow-md ${
                 stageIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-black hover:text-white"
               }`}
               disabled={stageIndex === 0}
@@ -79,7 +79,7 @@ const InputBox = ({ onAnswerSubmit }) => {
 
             <button
               onClick={handleClear}
-              className="px-4 py-2 bg-transparent border-2 border-black text-black font-semibold rounded-md shadow-md hover:bg-black hover:text-white"
+              className="px-4 py-1 bg-transparent border-2 border-black text-black font-semibold rounded-md shadow-md hover:bg-black hover:text-white"
             >
               Clear
             </button>
@@ -88,7 +88,7 @@ const InputBox = ({ onAnswerSubmit }) => {
             {stageIndex < stages.length - 1 ? (
               <button
                 onClick={handleNextStage}
-                className={`px-4 py-2 bg-transparent border-2 border-black text-black font-semibold rounded-md shadow-md ${
+                className={`px-4 py-1 bg-transparent border-2 border-black text-black font-semibold rounded-md shadow-md ${
                   inputValue === correctAnswers[stageIndex] ? "hover:bg-black hover:text-white" : "opacity-50 cursor-not-allowed"
                 }`}
                 disabled={inputValue !== correctAnswers[stageIndex]}
@@ -98,7 +98,7 @@ const InputBox = ({ onAnswerSubmit }) => {
             ) : (
               <button
                 onClick={handleSubmit}
-                className={`px-4 py-2 bg-transparent border-2 border-black text-black font-semibold rounded-md shadow-md ${
+                className={`px-4 py-1 bg-transparent border-2 border-black text-black font-semibold rounded-md shadow-md ${
                   inputValue === correctAnswers[stageIndex] ? "hover:bg-black hover:text-white" : "opacity-50 cursor-not-allowed"
                 }`}
                 disabled={inputValue !== correctAnswers[stageIndex]}

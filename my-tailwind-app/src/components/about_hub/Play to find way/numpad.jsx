@@ -9,7 +9,7 @@ const Numpad = ({ onNumberClick }) => {
           <button
             key={num}
             onClick={() => onNumberClick(num)}
-            className="w-12 h-12 bg-[#766C40] border-2 border-black text-white text-2xl font-bold rounded-md flex items-center justify-center shadow-md active:bg-gray-900"
+            className="w-10 h-10 bg-[#766C40] border-2 border-black text-white text-2xl font-bold rounded-md flex items-center justify-center shadow-md active:bg-gray-900"
           >
             {num}
           </button>
