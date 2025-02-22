@@ -3,6 +3,7 @@ import Nav from "../Knowledge/part_hub/Nav.jsx";
 import LanguageDropdown from "../bot copy/Lang";
 import HotCard from "./Hot_card.jsx";
 import { ChevronDown } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 const Hot = () => {
 
@@ -154,7 +155,10 @@ const Hot = () => {
                     />
                   ))
                 ) : (
-                  <p className="text-lg text-gray-700">Loading news...</p>
+                  <div className="flex items-center border border-black px-4 py-2 rounded-lg">
+      <Loader2 className="animate-spin w-7 h-7 mr-2" />
+      <span className="font-semibold">Loading news</span>
+    </div>
                 )}
 
               </div>
