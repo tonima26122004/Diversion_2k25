@@ -2,8 +2,8 @@
 import React from "react";
 import Nav from "../Knowledge/part_hub/Nav";
 
-import React, { useState, useEffect } from "react";
-import Nav from "../main copy/Nav";
+import  { useState, useEffect } from "react";
+
 
 import LanguageDropdown from "../bot copy/Lang";
 import Displaybox from "./Displaybox";

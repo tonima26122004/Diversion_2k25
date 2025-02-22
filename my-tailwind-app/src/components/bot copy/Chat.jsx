@@ -72,7 +72,7 @@ const Chat = () => {
             data: {
                 "contents": [{
                     "parts": [{
-                        "text": `${que} According to the constitution of India. Provide a clear,give the answer in circle bullet(medium size with filled) in point-wise  answer using proper line breaks, bullets and ensuring each point starts on a new line. Use full sentences and separate each point clearly.don't give any asterisks in answer.give answer within 60 words`
+                        "text": `${que}- here is the instruction for the messege- According to the constitution of India. Provide a clear,give the answer in circle bullet(medium size with filled) in point-wise  answer using proper line breaks, bullets and ensuring each point starts on a new line. Use full sentences and separate each point clearly.don't give any asterisks in answer.give answer within 60 words.if any other questions is there rather than articles,Laws,Constitution then just reply-"please provide only consitutuion , Laws and Article related Question" `
                     }]
                 }]
             }
