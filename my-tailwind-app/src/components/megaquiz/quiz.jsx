@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../main copy/Nav";
+import Nav from "../Knowledge/part_hub/Nav";
 import Carousel from "./carousel";
 import LanguageDropdown from "../bot copy/Lang";
 import ExamCard from "./Examcard"; // Importing the card component

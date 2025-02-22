@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Nav from "../main copy/Nav";
+import Nav from "../Knowledge/part_hub/Nav.jsx";
 import LanguageDropdown from "../bot copy/Lang";
 import HotCard from "./Hot_card.jsx";
 import { ChevronDown } from "lucide-react";
