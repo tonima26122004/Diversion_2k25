@@ -15,7 +15,7 @@ const Hot = () => {
   const fetchNews = async () => {
       
     const res = await fetch(
-      `https://newsapi.org/v2/everything?q=${selectedCategory}&from=2025-2-16&sortBy=publishedAt&apiKey=52c8562a09804547856d91128eee3af1`
+      `https://newsapi.org/v2/everything?q=${selectedCategory}&from=2025-2-22&sortBy=publishedAt&apiKey=52c8562a09804547856d91128eee3af1`
     );
     const data = await res.json();
     setNews(data.articles); 
