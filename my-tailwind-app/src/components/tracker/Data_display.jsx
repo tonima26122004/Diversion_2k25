@@ -36,12 +36,13 @@ const Data_display = ({ city }) => {
         Download and Display Pie Chart
       </button>
 
-      <div className="mb-8 relative">
-        <h3 className="text-xl font-semibold mb-2">Pie Chart : </h3>
+      <div className="mb-8 flex items-center relative">
+        <h3 className="text-xl font-semibold ml-4 mb-2">Pie Chart : </h3>
         {pieChartUrl ? (
-          <img src={pieChartUrl} alt="Pie Chart" className="w-1/3 h-auto absolute right-48 top-0" />
+          <img src={pieChartUrl} alt="Pie Chart" className="w-1/3 h-auto absolute right-1/2  top-0" />
         ) : (
           <p className="hidden">No Pie Chart Available</p>
+          
         )}
       </div>
     </div>

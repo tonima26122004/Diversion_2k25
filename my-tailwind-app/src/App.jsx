@@ -19,8 +19,8 @@ import Tracker_2 from "./components/tracker/Tracker_2";
 import Tracker from "./components/tracker/Tracker";
 import Tracker_3 from "./components/tracker/Tracker_3";
 import PrimeSubscription from "./components/subscription/subscribe";
-import Tracker from "./components/tracker/Tracker";
-import Tracker_3 from "./components/tracker/Tracker_3";
+// import Tracker from "./components/tracker/Tracker";
+/// import Tracker_3 from "./components/tracker/Tracker_3";
 function App() {
   return (
     <Router>
