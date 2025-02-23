@@ -223,7 +223,7 @@ const AnimatedInputBox = ({
             {/* Suggestions dropdown */}
             {suggestions.length > 0 && (
                 <div
-                    className={`absolute left-0 w-full bg-white border border-[#766C40] rounded-md shadow-lg z-10 mb-1 ${
+                    className={`absolute left-0 w-full bg-[#E4E2D6] border border-[#766C40] rounded-md shadow-lg z-10 mb-1 ${
                         showAbove ? "bottom-full mb-2" : "top-full mt-1"
                     }`}
                 >

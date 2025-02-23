@@ -24,24 +24,24 @@ const Data_display = ({ city }) => {
   };
 
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-semibold mb-4">Charts for {city}, West Bengal</h2>
+    <div className="p-4 text-libra">
+      <h2 className="text-2xl font-semibold mb-2">Charts for {city}, West Bengal</h2>
 
       {error && <p className="text-red-500">{error}</p>}
 
       <button 
         onClick={handleDownloadPieChart} 
-        className="bg-blue-500 text-white px-4 py-2 rounded mb-4"
+        className="bg-black text-white px-4 py-2 rounded-3xl flex items-center mb-4"
       >
         Download and Display Pie Chart
       </button>
 
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-2">Pie Chart</h3>
+      <div className="mb-8 relative">
+        <h3 className="text-xl font-semibold mb-2">Pie Chart : </h3>
         {pieChartUrl ? (
-          <img src={pieChartUrl} alt="Pie Chart" className="w-full h-auto" />
+          <img src={pieChartUrl} alt="Pie Chart" className="w-1/3 h-auto absolute right-48 top-0" />
         ) : (
-          <p>No Pie Chart Available</p>
+          <p className="hidden">No Pie Chart Available</p>
         )}
       </div>
     </div>
