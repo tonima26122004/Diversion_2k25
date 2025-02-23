@@ -22,18 +22,21 @@ const CustomMarkerWithLabel = ({ position, city, state }) => {
     const label = L.divIcon({
       className: 'custom-label', // CSS class for styling (optional, can be removed)
       html: `
-        <div style="
-          background-color: white;
-          padding: 4px 8px;
-          border-radius: 4px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          font-size: 14px;
-          font-weight: bold;
-          text-align: center;
-          white-space: nowrap;
-        ">
-          View The Law Violation Data
-        </div>
+       <div style="
+  background-color: white;
+  padding: 8px 8px; /* Increased padding for better spacing */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content; /* Ensures the width adjusts to the content */
+  max-width: 200px; /* Optional: Set a maximum width to prevent overflow */
+  margin: 0 auto; /* Centers the div horizontally */
+">
+  View The Law Violation Data
+</div>
       `,
       iconSize: [100, 20], // Adjust size of the label
       iconAnchor: [0, 0], // Position the label relative to the marker
@@ -56,7 +59,7 @@ const Map = ({ city, state }) => {
   const position = [22.5726, 88.3639]; 
 
   return (
-    <MapContainer center={position} zoom={13} style={{ height: '60%', width: '60%',display:'flex', justifyContent:'center'}}>
+    <MapContainer center={position} zoom={13} style={{ height: '60%', width: '100%',display:'flex', justifyContent:'center'}}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

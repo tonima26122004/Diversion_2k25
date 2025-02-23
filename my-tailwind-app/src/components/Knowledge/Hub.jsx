@@ -32,10 +32,10 @@ const Hub = () => {
  
 
   return (
-    <div className="relative">
-      <div className="bg-[#766C40] h-screen w-screen flex items-center justify-between relative">
+    <div className="relative ">
+      <div className="bg-[#766C40] h-screen w-screen  flex items-center justify-between relative">
         <Nav />
-        <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative overflow-y-auto">
+        <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative overflow-y-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent">
 
           {/* Heading */}
           <div className="flex">
