@@ -15,6 +15,7 @@ const AnimatedInputBox = ({
     const [suggestions, setSuggestions] = useState([]);
     const [showAbove, setShowAbove] = useState(false);
     const inputRef = useRef(null);
+    const [count,setcount]=useState(0);
 
     const articlewords = [
         "Article 1",
