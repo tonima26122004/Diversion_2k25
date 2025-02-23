@@ -10,7 +10,7 @@ const Listen = ({ ans }) => {
     const text = ans[0].bot.trim();
 
     try {
-      const response = await fetch("https://6b3d-2409-40e0-5f-860a-1856-6666-5551-a010.ngrok-free.app/generate-speech", {
+      const response = await fetch("https://98a1-2409-40e0-2c-1348-a18e-36e1-ede4-9d91.ngrok-free.app/generate-speech", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text }),
@@ -25,7 +25,6 @@ const Listen = ({ ans }) => {
       const audio = new Audio(audioUrl);
       audio.play();
 
-      
     } catch (error) {
       console.error("Error generating speech:", error);
     }
