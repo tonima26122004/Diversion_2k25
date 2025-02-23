@@ -196,14 +196,14 @@ const Tracker_3 = () => {
             </div>
 
             {/* Dynamic Cards Section */}
-            <div className="relative border-2 border-black w-[98%] h-[74%] mx-auto mt-3 p-4 rounded-xl">
+            <div className="relative border-2 border-black w-[98%] h-[79%] mx-auto mt-3 p-4 rounded-xl">
               <div>
                 <h1 className="text-3xl my-3 px-4 font-libra font-semibold text-[#766C40]">
                   <a className="text-3xl font-libra text-[#65090A]">Law Violation</a> in Newtown:
                 </h1>
               </div>
 
-              <div className="max-h-[450px] overflow-y-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent flex flex-col gap-2">
+              <div className="max-h-[480px] overflow-y-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent flex flex-col gap-2">
                 {violation_data.map((violation, index) => (
                   <Tracker3_card
                     key={index}
