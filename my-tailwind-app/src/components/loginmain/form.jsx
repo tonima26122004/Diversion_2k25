@@ -49,7 +49,7 @@ const SignUpForm = () => {
             required
           />
           
-          <div className="flex items-center mt-4 border border-black bg-white p-1 rounded-md w-40">
+          <div className="flex items-center mt-4 border border-black bg-[#E4E2D6] p-1 rounded-md w-40">
             <input
               type="checkbox"
               name="rememberMe"

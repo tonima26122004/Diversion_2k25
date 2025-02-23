@@ -1,8 +1,32 @@
 import React, { useState } from 'react';
 
+const stateCities = {
+  westbengal: ['Kolkata', 'Howrah', 'Durgapur'],
+  maharashtra: ['Mumbai', 'Pune', 'Nagpur'],
+  delhi: ['New Delhi'],
+  tamilnadu: ['Chennai', 'Coimbatore', 'Madurai'],
+  karnataka: ['Bengaluru', 'Mysuru', 'Hubli'],
+  uttarpradesh: ['Lucknow', 'Kanpur', 'Varanasi'],
+  gujarat: ['Ahmedabad', 'Surat', 'Vadodara'],
+  rajasthan: ['Jaipur', 'Udaipur', 'Jodhpur'],
+  kerala: ['Thiruvananthapuram', 'Kochi', 'Kozhikode'],
+  punjab: ['Chandigarh', 'Amritsar', 'Ludhiana'],
+  bihar: ['Patna', 'Gaya', 'Muzaffarpur'],
+  andhrapradesh: ['Hyderabad', 'Visakhapatnam', 'Vijayawada'],
+  telangana: ['Hyderabad', 'Warangal', 'Nizamabad'],
+  madhyapradesh: ['Bhopal', 'Indore', 'Jabalpur'],
+  odisha: ['Bhubaneswar', 'Cuttack', 'Rourkela'],
+  haryana: ['Gurgaon', 'Faridabad', 'Panipat'],
+  jharkhand: ['Ranchi', 'Jamshedpur', 'Dhanbad'],
+  assam: ['Guwahati', 'Silchar', 'Dibrugarh'],
+  chhattisgarh: ['Raipur', 'Bhilai', 'Bilaspur'],
+  uttarakhand: ['Dehradun', 'Haridwar', 'Nainital'],
+};
+
 const Tracker_nav = ({ onCityChange, onStateChange }) => {
   const [city, setCity] = useState('kolkata');
   const [state, setState] = useState('westbengal');
+  const [cities, setCities] = useState(stateCities[state]);
 
   const handleCityChange = (e) => {
     setCity(e.target.value);
@@ -10,8 +34,10 @@ const Tracker_nav = ({ onCityChange, onStateChange }) => {
   };
 
   const handleStateChange = (e) => {
-    setState(e.target.value);
-    onStateChange(e.target.value);
+    const newState = e.target.value;
+    setState(newState);
+    setCities(stateCities[newState]); // Update cities based on the selected state
+    onStateChange(newState);
   };
 
   return (
@@ -28,10 +54,9 @@ const Tracker_nav = ({ onCityChange, onStateChange }) => {
             onChange={handleCityChange}
             className="bg-transparent text-gray-500 py-1 focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
-            <option value="kolkata">Kolkata</option>
-            {Array.from({ length: 16 }, (_, index) => (
-              <option key={index + 1} value={`city${index + 1}`}>
-                City {index + 1}
+            {cities.map((cityName, index) => (
+              <option key={index} value={cityName.toLowerCase()}>
+                {cityName}
               </option>
             ))}
           </select>
@@ -48,10 +73,11 @@ const Tracker_nav = ({ onCityChange, onStateChange }) => {
             onChange={handleStateChange}
             className="bg-transparent rounded py-1 text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
-            <option value="westbengal">West Bengal</option>
-            <option value="state1">State 1</option>
-            <option value="state2">State 2</option>
-            <option value="state3">State 3</option>
+            {Object.keys(stateCities).map((stateName) => (
+              <option key={stateName} value={stateName}>
+                {stateName.charAt(0).toUpperCase() + stateName.slice(1)}
+              </option>
+            ))}
           </select>
         </div>
 
