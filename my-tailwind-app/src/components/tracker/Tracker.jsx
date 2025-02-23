@@ -2,20 +2,19 @@ import React, { useState } from 'react';
 import Nav from '../Knowledge/part_hub/Nav';
 import LanguageDropdown from '../bot copy/Lang';
 import Tracker_nav from './Tracker_nav';
-import Map from './Map_display'; // Import the updated Map component
+import Map from './Map_display';
+import Data_display from './Data_display'; // Import the Data_display component
 
 const Tracker = () => {
-  const [city, setCity] = useState('kolkata');
+  const [city, setCity] = useState('Kolkata');
   const [state, setState] = useState('westbengal');
 
   const handleCityChange = (newCity) => {
     setCity(newCity);
-    // Add logic to update map based on city
   };
 
   const handleStateChange = (newState) => {
     setState(newState);
-    // Add logic to update map based on state
   };
 
   return (
@@ -64,6 +63,9 @@ const Tracker = () => {
               <div style={{ height: '670px', width: '100%' }}>
                 <Map city={city} state={state} />
               </div>
+
+              {/* Display the charts */}
+              <Data_display city={city} />
             </div>
           </div>
         </div>

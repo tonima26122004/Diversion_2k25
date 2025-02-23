@@ -1,14 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
-const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, setIsInputMoved }) => {
+const AnimatedInputBox = ({
+    addQuery,
+    getans,
+    setque,
+    que,
+    setIsQuerySubmitted,
+    setIsInputMoved
+}) => {
     const [image, setImage] = useState(null);
     const [isListening, setIsListening] = useState(false);
     const [voice, setVoice] = useState(false);
     const [recognitionInstance, setRecognitionInstance] = useState(null);
     const [suggestions, setSuggestions] = useState([]);
+    const [showAbove, setShowAbove] = useState(false);
+    const inputRef = useRef(null);
 
     const articlewords = [
-    'Article 1', 'Article 2', 'Article 3', 'Article 4', 'Article 5', 
+        "Article 1",
+       'Article 1', 'Article 2', 'Article 3', 'Article 4', 'Article 5', 
     'Article 6', 'Article 7', 'Article 8', 'Article 9', 'Article 10', 
     'Article 15', 'Article 19', 'Article 21', 'Article 32', 'Article 44', 
     'Article 51A', 'Article 124', 'Article 141', 'Article 226', 'Article 300A',
@@ -105,27 +115,25 @@ const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, 
     'When can the police search my house?', 'When can I request a restraining order?', 
     'When is political protest legal?', 'When should I file a PIL?', 
     'When can I appeal a court decision?', 'When should I hire a property lawyer?'
-];
+    ];
 
-    const generateNGramSuggestions = (input, words, n = 2) => {
+    const generateNGramSuggestions = (input, words) => {
         if (!input) return [];
         const inputLower = input.toLowerCase();
-        const suggestions = words.filter(word => {
-            const wordLower = word.toLowerCase();
-            return wordLower.includes(inputLower);
-        });
-        return suggestions.slice(0, 5); 
+        return words.filter(word => word.toLowerCase().includes(inputLower)).slice(0, 5);
     };
 
-    const handleInputChange = (e) => {
+    const handleInputChange = e => {
         const value = e.target.value;
         setque(value);
         const newSuggestions = generateNGramSuggestions(value, articlewords);
         setSuggestions(newSuggestions);
+
+        // Check input position
+        adjustDropdownPosition();
     };
 
-    
-    const handleSuggestionClick = (suggestion) => {
+    const handleSuggestionClick = suggestion => {
         setque(suggestion);
         setSuggestions([]);
     };
@@ -135,15 +143,15 @@ const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, 
         recognition.lang = "en-US";
         recognition.interimResults = false;
 
-        recognition.onresult = (event) => {
+        recognition.onresult = event => {
             const ans = event.results[0][0].transcript;
             setque(ans);
             setIsListening(false);
             setVoice(false);
         };
 
-        recognition.onerror = (event) => {
-            console.error('Speech Recognition Error:', event.error);
+        recognition.onerror = event => {
+            console.error("Speech Recognition Error:", event.error);
             setIsListening(false);
             setVoice(false);
         };
@@ -159,20 +167,18 @@ const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, 
         setRecognitionInstance(recognition);
     }, [setque, getans, setIsQuerySubmitted, setIsInputMoved]);
 
-    const handleImageUpload = (e) => {
+    const handleImageUpload = e => {
         const file = e.target.files[0];
         if (file) {
             setImage(URL.createObjectURL(file));
         }
     };
 
-    // Handle voice button click
     const handleVoice = () => {
         setVoice(true);
         recognitionInstance && recognitionInstance.start();
     };
 
-    // Stop speech recognition
     const stopSpeechRecognition = () => {
         if (recognitionInstance) {
             recognitionInstance.stop();
@@ -181,18 +187,31 @@ const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, 
         }
     };
 
-    // Handle Enter key press
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter') {
+    const handleKeyDown = e => {
+        if (e.key === "Enter") {
             getans();
             setIsQuerySubmitted(true);
             setIsInputMoved(true);
         }
     };
 
+    const adjustDropdownPosition = () => {
+        if (inputRef.current) {
+            const rect = inputRef.current.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            setShowAbove(rect.bottom > viewportHeight * 0.75);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", adjustDropdownPosition);
+        return () => window.removeEventListener("resize", adjustDropdownPosition);
+    }, []);
+
     return (
         <div className="relative w-full">
             <input
+                ref={inputRef}
                 type="text"
                 value={que}
                 onChange={handleInputChange}
@@ -203,7 +222,11 @@ const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, 
 
             {/* Suggestions dropdown */}
             {suggestions.length > 0 && (
-                <div className="absolute top-full left-0 w-full bg-white border border-[#766C40] rounded-b-md shadow-lg z-10">
+                <div
+                    className={`absolute left-0 w-full bg-white border border-[#766C40] rounded-md shadow-lg z-10 mb-1 ${
+                        showAbove ? "bottom-full mb-2" : "top-full mt-1"
+                    }`}
+                >
                     {suggestions.map((suggestion, index) => (
                         <div
                             key={index}
@@ -218,12 +241,7 @@ const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, 
 
             {/* Buttons for upload, voice, and send */}
             <div className="absolute inset-y-0 right-0 flex items-center gap-4">
-                <input
-                    type="file"
-                    onChange={handleImageUpload}
-                    className="hidden"
-                    id="image-upload"
-                />
+                <input type="file" onChange={handleImageUpload} className="hidden" id="image-upload" />
                 <label htmlFor="image-upload" className="py-1 rounded-md cursor-pointer">
                     <img className="w-6" src="upload.svg" alt="Upload" />
                 </label>
