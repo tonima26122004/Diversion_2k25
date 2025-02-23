@@ -223,7 +223,11 @@ const AnimatedInputBox = ({
             {/* Suggestions dropdown */}
             {suggestions.length > 0 && (
                 <div
+<<<<<<< HEAD
+                    className={`absolute left-0 w-full bg-white border border-[#766C40] rounded-md shadow-lg z-10 mb-1 $showAbove ? "bottom-full mb-2" : "top-full mt-1"
+=======
                     className={`absolute left-0 w-full bg-white border border-[#766C40] rounded-md shadow-lg z-10 mb-1 ${showAbove ? "bottom-full mb-2" : "top-full mt-1"
+>>>>>>> 8265f2e7374f7713ed227e4c28d544703ccb602c
                     }`}
                 >
                     {suggestions.map((suggestion, index) => (
