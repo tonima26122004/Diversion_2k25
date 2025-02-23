@@ -1,27 +1,29 @@
 import React from "react";
-<<<<<<< HEAD
-
-
-=======
-// import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
->>>>>>> 88b7dbc3fec1edbe1e66fcbca5b6c277f484cbe3
 import { ChevronLeft } from "lucide-react";
+import LanguageDropdown from "../bot copy/Lang";
 
-const PrimeSubscription = ({ open, onClose }) => {
+const PrimeSubscription = () => {
   return (
-    <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl bg-[#F5F1E6] border-2 border-[#766C40] rounded-lg p-6">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-semibold text-black mb-4">
-            What do you get with Prime?
-          </DialogTitle>
-        </DialogHeader>
+    <div className="min-h-screen font-libra bg-white flex flex-col items-center py-6 px-4">
+      <div className="flex gap-4  w-full justify-end items-center">
+      <button className="flex gap-2 text-black border border-black px-4 py-2 rounded-full hover:bg-gray-200 mt-6">
+        <ChevronLeft size={20} />
+        Back
+      </button>
+        <LanguageDropdown />
+        <img src="User.svg" alt="user" className="w-12" />
+        </div>
+      {/* Main Content */}
+      <div className="bg-[#F5F1E6] border-2 border-[#766C40] rounded-lg p-6 mt-6 w-full max-w-4xl">
+        <h2 className="text-2xl font-semibold text-black mb-4">
+          What do you get with Prime?
+        </h2>
 
         {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 rounded-lg bg-[#766C40]">
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-[#766C40] lg:grid-cols-4 gap-4 p-4 rounded-lg">
           {/* Feature 1 */}
           <div className="bg-[#766C40] text-white p-4 rounded-lg flex gap-2">
-            <div className="w-2 h-40 bg-white"></div>
+            <div className="w-2 h-68 bg-white"></div>
             <div>
               <h3 className="font-semibold text-lg mb-2 flex items-center text-red-900">
                 <img src="diamond2.svg" alt="Bot" className="w-6 h-6 mr-2" />
@@ -36,7 +38,7 @@ const PrimeSubscription = ({ open, onClose }) => {
 
           {/* Feature 2 */}
           <div className="bg-[#766C40] text-white p-4 rounded-lg flex gap-2">
-            <div className="w-2 h-36 bg-white"></div>
+            <div className="w-2  h-68 bg-white"></div>
             <div>
               <h3 className="font-semibold text-lg mb-2 flex items-center text-red-900">
                 <img src="diamond2.svg" alt="Hub" className="w-6 h-6 mr-2" />
@@ -50,7 +52,7 @@ const PrimeSubscription = ({ open, onClose }) => {
 
           {/* Feature 3 */}
           <div className="bg-[#766C40] text-white p-4 rounded-lg flex gap-2">
-            <div className="w-2 h-40 bg-white"></div>
+            <div className="w-2 h-68 bg-white"></div>
             <div>
               <h3 className="font-semibold text-lg mb-2 flex items-center text-red-900">
                 <img src="diamond2.svg" alt="Quiz" className="w-6 h-6 mr-2" />
@@ -65,7 +67,7 @@ const PrimeSubscription = ({ open, onClose }) => {
 
           {/* Feature 4 */}
           <div className="bg-[#766C40] text-white p-4 rounded-lg flex gap-2">
-            <div className="w-2 h-36 bg-white"></div>
+            <div className="w-2 h-68 bg-white"></div>
             <div>
               <h3 className="font-semibold text-lg mb-2 flex items-center text-red-900">
                 <img src="diamond2.svg" alt="Updates" className="w-6 h-6 mr-2" />
@@ -95,16 +97,13 @@ const PrimeSubscription = ({ open, onClose }) => {
             <p className="text-sm mt-1">₹1,999/year (Save 15%)</p>
           </div>
         </div>
+      </div>
 
-        <button
-          onClick={onClose}
-          className="flex gap-2 text-black border border-black px-4 py-2 rounded-full hover:bg-gray-200 mt-6"
-        >
-          <ChevronLeft size={20} />
-          Back
-        </button>
-      </DialogContent>
-    </Dialog>
+      <button className="flex gap-2 text-black border border-black px-4 py-2 rounded-full hover:bg-gray-200 mt-6">
+        <ChevronLeft size={20} />
+        Back
+      </button>
+    </div>
   );
 };
 
