@@ -15,6 +15,7 @@ const AnimatedInputBox = ({
     const [suggestions, setSuggestions] = useState([]);
     const [showAbove, setShowAbove] = useState(false);
     const inputRef = useRef(null);
+    const [count,setcount]=useState(0);
 
     const articlewords = [
         "Article 1",
@@ -209,6 +210,7 @@ const AnimatedInputBox = ({
     }, []);
 
     return (
+        
         <div className="relative w-full">
             <input
                 ref={inputRef}
@@ -257,6 +259,7 @@ const AnimatedInputBox = ({
                         getans();
                         setIsQuerySubmitted(true);
                         setIsInputMoved(true);
+                        setcount(count+1)
                     }}
                     className="py-2 bg-[#766C40] rounded-md px-2"
                 >
