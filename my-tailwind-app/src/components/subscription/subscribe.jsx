@@ -1,10 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 
-
-=======
-// import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
->>>>>>> 88b7dbc3fec1edbe1e66fcbca5b6c277f484cbe3
 import { ChevronLeft } from "lucide-react";
 
 const PrimeSubscription = ({ open, onClose }) => {
