@@ -210,6 +210,7 @@ const AnimatedInputBox = ({
     }, []);
 
     return (
+        
         <div className="relative w-full">
             <input
                 ref={inputRef}
@@ -260,6 +261,7 @@ const AnimatedInputBox = ({
                         getans();
                         setIsQuerySubmitted(true);
                         setIsInputMoved(true);
+                        setcount(count+1)
                     }}
                     className="py-2 bg-[#766C40] rounded-md px-2"
                 >
