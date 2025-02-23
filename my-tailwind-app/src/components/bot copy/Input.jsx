@@ -112,7 +112,7 @@ const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, 
         const inputLower = input.toLowerCase();
         const suggestions = words.filter(word => {
             const wordLower = word.toLowerCase();
-            return wordLower.includes(inputLower);
+            return  wordLower.includes(inputLower);
         });
         return suggestions.slice(0, 5); 
     };
@@ -203,11 +203,11 @@ const AnimatedInputBox = ({ addQuery, getans, setque, que, setIsQuerySubmitted, 
 
             {/* Suggestions dropdown */}
             {suggestions.length > 0 && (
-                <div className="absolute top-full left-0 w-full bg-white border border-[#766C40] rounded-b-md shadow-lg z-10">
+                <div className="absolute top-full left-0 w-full bg-[#E4E2D6] border border-[#766C40] rounded-b-md shadow-lg z-10">
                     {suggestions.map((suggestion, index) => (
                         <div
                             key={index}
-                            className="p-2 hover:bg-[#E4E2D6] cursor-pointer"
+                            className="p-2 hover:bg-[#ffff] cursor-pointer"
                             onClick={() => handleSuggestionClick(suggestion)}
                         >
                             {suggestion}
