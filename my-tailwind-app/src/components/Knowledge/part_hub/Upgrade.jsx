@@ -6,7 +6,7 @@ const Upgrade = () => {
 
   return (
     <button
-      className="inline-block backdrop-blur-md rounded-3xl p-3 mt-16 border-2 border-white/20"
+      className="inline-block backdrop-blur-md bg-[#E4E2D6] rounded-3xl p-3 mt-16 border-2 border-white/20"
       onClick={() => navigate('/subscribe')} // Navigate on click
     >
       <div
