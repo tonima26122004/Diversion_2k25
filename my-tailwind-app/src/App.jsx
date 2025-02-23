@@ -16,13 +16,19 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import 'leaflet-defaulticon-compatibility';
 import Tracker_2 from "./components/tracker/Tracker_2";
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 8265f2e7374f7713ed227e4c28d544703ccb602c
 import Tracker from "./components/tracker/Tracker";
 import Tracker_3 from "./components/tracker/Tracker_3";
 import PrimeSubscription from "./components/subscription/subscribe";
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8265f2e7374f7713ed227e4c28d544703ccb602c
 function App() {
   return (
     <Router>
@@ -32,7 +38,7 @@ function App() {
         <Route path="/Hub" element={<Hub />} />
         <Route path="/about_hub" element={<A_hub />} />
 <Route path="/part_hub" element={<Part_hub />} />
-
+<Route path="/subscribe" element={<PrimeSubscription />} />
 
         <Route path="/quiz" element={<Quiz/>} />
         <Route path="/signup" element={<Signup />} />
