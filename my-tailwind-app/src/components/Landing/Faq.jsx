@@ -14,9 +14,9 @@ const Faq = () => {
 
   return (
     <section id="faq" className="">
-      <div className="relative mt-5 flex justify-between">
+      <div className="relative mt-5 flex justify-center my-4">
         
-        <img src="" alt="" />
+        <img src="faq.svg" alt="" />
       </div>
 
       <div className="card flex px-4 justify-between">
@@ -52,9 +52,23 @@ const Faq = () => {
             extraContent="Users can log in to the platform and view real-time updates, milestones, and reports related to their projects."
             imageUrl="Dropdown.svg"
           />
+           <ExpandableCard
+            title="How can I track my project updates?"
+            description=""
+            extraContent="Users can log in to the platform and view real-time updates, milestones, and reports related to their projects."
+            imageUrl="Dropdown.svg"
+          />
+           <ExpandableCard
+            title="How can I track my project updates?"
+            description=""
+            extraContent="Users can log in to the platform and view real-time updates, milestones, and reports related to their projects."
+            imageUrl="Dropdown.svg"
+          />
+          
         </div>
 
-        <div className="flex flex-col w-2/5 items-center border-2 border-[#766C40]">
+        {/* <div className="flex flex-col w-2/5 items-center border-2 border-[#766C40]">
+        
         <div><img src="ask.svg" alt="" /></div>
         
           <h1 className="text-center text-4xl font-semibold mt-5">Any Questions?</h1>
@@ -77,7 +91,38 @@ const Faq = () => {
               </button>
             </div>
           </div>
+        </div> */}
+
+        <div className='w-3/5 mx-10 mt-14 max-h-[40%]'>
+        <div className='flex border-2 border-[#766C40] max-h-[100%] flex-col items-center'>
+        <div><img src="ask.svg" alt="" /></div>
+        
+        <h1 className="text-center text-4xl font-semibold mt-5">Any Questions?</h1>
+
+        <div className="mt-5 w-full px-5">
+          <h2 className="text-lg font-semibold">Let me know.</h2>
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder="Write here"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+          />
+          <div className="flex justify-center my-5">
+            <button
+              onClick={handleButtonClick}
+              className="bg-black text-white rounded-full px-6 font-libra py-2"
+            >
+              Send
+            </button>
+          </div>
+          </div>
+
         </div>
+
+        </div>
+
+
       </div>
     </section>
   );
