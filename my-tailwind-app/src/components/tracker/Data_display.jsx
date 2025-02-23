@@ -1,51 +1,39 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
-const Data_display = ({ city }) => {
-  const [pieChartUrl, setPieChartUrl] = useState(null);
-  const [error, setError] = useState(null);
+const kolkata_data = {
+  "Percentage": [30, 20, 50], // Converted to numbers
+  "Violation Name": ["Violation A", "Violation B", "Violation C"]
+};
 
-  // ✅ Update with correct Flask URL
-  const BASE_URL = "http://127.0.0.1:5000"; 
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28"];
 
-  const handleDownloadPieChart = async () => {
-    try {
-      const response = await axios.get(`${BASE_URL}/download_pie_chart`, {
-        responseType: 'blob',
-      });
+const data = kolkata_data["Percentage"].map((value, index) => ({
+  name: kolkata_data["Violation Name"][index],
+  value: value
+}));
 
-      const imageUrl = URL.createObjectURL(new Blob([response.data]));
-      setPieChartUrl(imageUrl);
-      setError(null);
-    } catch (error) {
-      console.error("Error downloading pie chart:", error);
-      setError("Failed to download the pie chart. Please try again.");
-    }
-  };
-
+const Data_display = () => {
   return (
-    <div className="p-4 text-libra">
-      <h2 className="text-2xl font-semibold mb-2">Charts for {city}, West Bengal</h2>
-
-      {error && <p className="text-red-500">{error}</p>}
-
-      <button 
-        onClick={handleDownloadPieChart} 
-        className="bg-black text-white px-4 py-2 rounded-3xl flex items-center mb-4"
-      >
-        Download and Display Pie Chart
-      </button>
-
-      <div className="mb-8 flex items-center relative">
-        <h3 className="text-xl font-semibold ml-4 mb-2">Pie Chart : </h3>
-        {pieChartUrl ? (
-          <img src={pieChartUrl} alt="Pie Chart" className="w-1/3 h-auto absolute right-1/2  top-0" />
-        ) : (
-          <p className="hidden">No Pie Chart Available</p>
-          
-        )}
-      </div>
-    </div>
+    <ResponsiveContainer width="100%" height={400}> {/* Increased height */}
+      <PieChart>
+        <Pie
+          data={data}
+          cx="50%"
+          cy="50%"
+          outerRadius={120} // Increased outer radius
+          fill="#8884d8"
+          dataKey="value"
+          label
+        >
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
+        <Tooltip />
+        <Legend />
+      </PieChart>
+    </ResponsiveContainer>
   );
 };
 
