@@ -1,8 +1,6 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
 
 const Land_nav = () => {
-  const navigate = useNavigate();
   return (
     <div>
       <div className="flex justify-between items-center w-full bg-[#766C40] mx-auto rounded-full mt-4">
@@ -12,14 +10,14 @@ const Land_nav = () => {
         </div>
 
 
-        <div className='flex items-center'>
+        <div className='flex '>
             <ul className='flex gap-10 mr-10 text-white text-lg font-md font-libra'>
                 <button id='Home'>Home</button>
                 <button id='About'>About</button>
                 <button id='Features'>Features</button>
                 <button id='Testimonials' >Testimonials</button>
                 <button id='FAQ'>FAQ</button>
-                <button className='bg-[#E4E2D6] rounded-full text-black px-4 p-1 font-semibold ' onClick={() => navigate("/login")}>Login/Register</button>
+                <button className='bg-[#E4E2D6] rounded-full text-black px-4 p-1 font-semibold'>Login/Register</button>
             </ul>
         </div>
       </div>

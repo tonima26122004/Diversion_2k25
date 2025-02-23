@@ -1,42 +1,34 @@
-from flask import Flask, send_file, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
-import matplotlib.pyplot as plt
+from transformers import pipeline
+from datasets import load_dataset
+import soundfile as sf
+import torch
 import os
 
 app = Flask(__name__)
-CORS(app)  # ✅ Allow requests from frontend
+CORS(app) 
+synthesiser = pipeline("text-to-speech", "microsoft/speecht5_tts")
+embeddings_dataset = load_dataset("Matthijs/cmu-arctic-xvectors", split="validation")
+speaker_embedding = torch.tensor(embeddings_dataset[7306]["xvector"]).unsqueeze(0)
 
-# Ensure 'public' directory exists
-os.makedirs("public", exist_ok=True)
-
-# Sample data for Kolkata law violations
-kolkata_data = {
-    'Percentage': ['30%', '20%', '50%'],
-    'Violation Name': ['Violation A', 'Violation B', 'Violation C']
-}
-
-@app.route('/download_pie_chart', methods=['GET'])
-def download_pie_chart():
+@app.route("/generate-speech", methods=["POST"])
+def generate_speech():
     try:
-        # Generate the pie chart
-        plt.figure(figsize=(8, 6))
-        plt.pie(
-            [float(p.rstrip('%')) for p in kolkata_data['Percentage']], 
-            labels=kolkata_data['Violation Name'], 
-            autopct="%1.1f%%", 
-            startangle=140
-        )
-        plt.title("Law Violations in Kolkata (Pie Chart)")
+        data = request.get_json()
+        text = data.get("text", "").strip()
 
-        # Save the pie chart
-        chart_path = os.path.join("public", "pie_chart.png")
-        plt.savefig(chart_path, format="png", dpi=300, bbox_inches="tight")
-        plt.close()
+        if not text:
+            return jsonify({"error": "No text provided"}), 400
 
-        return send_file(chart_path, mimetype="image/png")
+        speech = synthesiser(text, forward_params={"speaker_embeddings": speaker_embedding})
+        output_file = "speech.wav"
+        sf.write(output_file, speech["audio"], samplerate=speech["sampling_rate"])
+
+        return send_file(output_file, as_attachment=True)
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500  # ✅ Return error in JSON
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)
