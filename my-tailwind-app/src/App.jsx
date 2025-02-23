@@ -16,11 +16,27 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import 'leaflet-defaulticon-compatibility';
 import Tracker_2 from "./components/tracker/Tracker_2";
+<<<<<<< HEAD
 import Tracker from "./components/tracker/Tracker";
 import Tracker_3 from "./components/tracker/Tracker_3";
 import PrimeSubscription from "./components/subscription/subscribe";
 
 
+=======
+
+
+
+
+
+
+
+
+import Tracker from "./components/tracker/Tracker";
+import Tracker_3 from "./components/tracker/Tracker_3";
+
+
+
+>>>>>>> ccc5f1d559e044b291803018134e2c0d136f9614
 function App() {
   return (
     <Router>
@@ -30,7 +46,7 @@ function App() {
         <Route path="/Hub" element={<Hub />} />
         <Route path="/about_hub" element={<A_hub />} />
 <Route path="/part_hub" element={<Part_hub />} />
-<Route path="/subscribe" element={<PrimeSubscription />} />
+
 
         <Route path="/quiz" element={<Quiz/>} />
         <Route path="/signup" element={<Signup />} />
@@ -39,7 +55,7 @@ function App() {
 
         {/* about_hub *Top nav* routes */}
 
-        <Route path="/Read_the_article" element={<A_hub a={1} />} />
+        <Route path="/Read the article" element={<A_hub a={1} />} />
         <Route path="/Visualize your lesson" element={<Visualize />} />
         <Route path="/Play to find way" element={<Game />} />
         <Route path="/Related cases" element={<Cases />} />
