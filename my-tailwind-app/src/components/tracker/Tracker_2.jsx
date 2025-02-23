@@ -41,7 +41,8 @@ const Tracker_2 = () => {
 </div>
 
 <div>
-    <Data_display/>
+<Data_display city="Kolkata" />
+
 </div>
 
       
