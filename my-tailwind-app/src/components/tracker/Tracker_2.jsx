@@ -36,15 +36,19 @@ const Tracker_2 = () => {
                 Tracking Law <a className="text-2xl font-libra text-[#65090A]">Violations</a> Across{" "}
                 <a className="text-2xl font-libra text-[#65090A]">Regions & Time in Newtown:</a>
               </h1>
+
+              <div>
+        <Data_display city="Kolkata" />
+      </div>  
+            
+
             </div>
           </div>
         </div>
       </div>
 
       {/* Pass the city prop to Data_display */}
-      <div>
-        <Data_display city="Kolkata" />
-      </div>
+      
     </div>
   );
 };

@@ -6,6 +6,7 @@ import LanguageDropdown from "../bot copy/Lang";
 const PrimeSubscription = () => {
   return (
     <div className="min-h-screen font-libra bg-white flex flex-col items-center py-6 px-4">
+
       <div className="flex items-center w-full">
       <button className="flex gap-2 text-black border border-black px-4 py-2 rounded-full hover:bg-gray-200 ">
         <ChevronLeft size={20} />
@@ -17,6 +18,7 @@ const PrimeSubscription = () => {
         <img src="User.svg" alt="user" className="w-12" />
         </div>
         </div>
+
       {/* Main Content */}
       <div className="bg-[#F5F1E6]  border-black border-2 rounded-lg p-6 mt-6 w-full max-w-4xl">
         <h2 className="text-2xl font-semibold text-black mb-4">

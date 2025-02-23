@@ -39,7 +39,7 @@ const Carousel = () => {
                 {cards.map((card, index) => (
                     <button 
                         key={index}
-                        className='flex-none w-[22%] min-w-[250px] bg-[#766C40] text-white p-6 rounded-lg shadow-md font-libra flex flex-col items-start snap-center transition duration-200 hover:bg-[#5A2D0C] active:scale-95'
+                        className='flex-none w-[24%] min-w-[250px] bg-[#766C40] text-white p-6 rounded-lg shadow-md font-libra flex flex-col items-start snap-center transition duration-200 hover:bg-[#5A2D0C] active:scale-95'
                     >
                         <div className='flex items-center gap-2'>
                         <div className='flex items-center gap-2 mb-2'>
