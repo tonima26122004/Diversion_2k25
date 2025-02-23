@@ -31,7 +31,7 @@ const Quiz = () => {
   return (
     <div className="bg-[#766C40] h-screen w-screen flex items-center relative overflow-y-scroll">
       <Nav />
-      <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl mr-4 relative p-6 overflow-y-scroll">
+      <div className="bg-[#E4E2D6] w-[88%] h-[95%] rounded-xl relative m-4 overflow-y-scroll">
         
         {/* Header Section */}
         <div className="flex justify-between items-center">
