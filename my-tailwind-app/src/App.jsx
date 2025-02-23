@@ -16,11 +16,20 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import 'leaflet-defaulticon-compatibility';
 import Tracker_2 from "./components/tracker/Tracker_2";
+<<<<<<< HEAD
+
+import Tracker from "./components/tracker/Tracker";
+import Tracker_3 from "./components/tracker/Tracker_3";
+import PrimeSubscription from "./components/subscription/subscribe";
+
+
+=======
 import Tracker from "./components/tracker/Tracker";
 import Tracker_3 from "./components/tracker/Tracker_3";
 import PrimeSubscription from "./components/subscription/subscribe";
 // import Tracker from "./components/tracker/Tracker";
 /// import Tracker_3 from "./components/tracker/Tracker_3";
+>>>>>>> 88b7dbc3fec1edbe1e66fcbca5b6c277f484cbe3
 function App() {
   return (
     <Router>

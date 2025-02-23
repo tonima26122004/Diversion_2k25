@@ -42,14 +42,14 @@ const Part_hub = ({ partnumber}) => {
                 
               />
               <ArticleCard
-                articleNumber={1}
-                articleName="Name and territory of the Union"
+                articleNumber={2}
+                articleName="“Admission or establishment of new States”"
                 readUrl="/read-article"
                
               />
               <ArticleCard
-                articleNumber={1}
-                articleName="Name and territory of the Union"
+                articleNumber={3}
+                articleName="“Formation of new States and alteration of areas, boundaries, or names of existing States”"
                 readUrl="/read-article"
                 
               />
@@ -58,8 +58,8 @@ const Part_hub = ({ partnumber}) => {
             <div className="mt-4 space-y-4 ml-12">
             <div className="flex space-x-36">
               <ArticleCard
-                articleNumber={1}
-                articleName="Name and territory of the Union"
+                articleNumber={4}
+                articleName="“Laws made under Articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules”"
                 readUrl="/read-article"
                 
               />
