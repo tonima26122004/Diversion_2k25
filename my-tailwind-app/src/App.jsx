@@ -18,10 +18,7 @@ import 'leaflet-defaulticon-compatibility';
 import Tracker_2 from "./components/tracker/Tracker_2";
 import Tracker from "./components/tracker/Tracker";
 import Tracker_3 from "./components/tracker/Tracker_3";
-<<<<<<< HEAD
-=======
 import PrimeSubscription from "./components/subscription/subscribe";
->>>>>>> 5ca73394d6195aae730b5eabec399cd322c91f88
 
 
 function App() {
