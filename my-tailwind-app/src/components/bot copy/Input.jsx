@@ -15,7 +15,7 @@ const AnimatedInputBox = ({
     const [suggestions, setSuggestions] = useState([]);
     const [showAbove, setShowAbove] = useState(false);
     const inputRef = useRef(null);
-    const [count,setcount]=useState(0);
+    const [count, setcount] = useState(0);
 
     const articlewords = [
         "Article 1",
@@ -130,7 +130,7 @@ const AnimatedInputBox = ({
         const newSuggestions = generateNGramSuggestions(value, articlewords);
         setSuggestions(newSuggestions);
 
-        // Check input position
+        // Adjust dropdown position
         adjustDropdownPosition();
     };
 
@@ -210,7 +210,6 @@ const AnimatedInputBox = ({
     }, []);
 
     return (
-        
         <div className="relative w-full">
             <input
                 ref={inputRef}
@@ -225,18 +224,21 @@ const AnimatedInputBox = ({
             {/* Suggestions dropdown */}
             {suggestions.length > 0 && (
                 <div
-                    className={`absolute left-0 w-full bg-white border border-[#766C40] rounded-md shadow-lg z-10 mb-1 $showAbove ? "bottom-full mb-2" : "top-full mt-1"`}
-                >
-                    {suggestions.map((suggestion, index) => (
-                        <div
-                            key={index}
-                            className="p-2 hover:bg-[#E4E2D6] cursor-pointer"
-                            onClick={() => handleSuggestionClick(suggestion)}
-                        >
-                            {suggestion}
-                        </div>
-                    ))}
-                </div>
+                className={`absolute left-0 w-full bg-[#E4E2D6] border border-[#766C40] rounded-md shadow-lg z-10 ${
+                    showAbove ? "bottom-full mb-2" : "top-full mt-1"
+                }`}
+            >
+                {suggestions.map((suggestion, index) => (
+                    <div
+                        key={index}
+                        className="p-2 hover:bg-[#79745c] hover:text-white cursor-pointer"
+                        onClick={() => handleSuggestionClick(suggestion)}
+                    >
+                        {suggestion}
+                    </div>
+                ))}
+            </div>
+            
             )}
 
             {/* Buttons for upload, voice, and send */}
@@ -259,7 +261,7 @@ const AnimatedInputBox = ({
                         getans();
                         setIsQuerySubmitted(true);
                         setIsInputMoved(true);
-                        setcount(count+1)
+                        setcount(count + 1);
                     }}
                     className="py-2 bg-[#766C40] rounded-md px-2"
                 >

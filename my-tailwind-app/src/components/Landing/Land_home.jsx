@@ -4,10 +4,10 @@ const Land_home = () => {
   return (
     <><div>
       <div className="flex items-center mx-4 relative">
-        <div className="w-[50%] flex flex-col gap-5 relative">
+        <div className="w-[70%] flex flex-col gap-5 relative">
           <div className="relative">
             <img
-              className="absolute right-0 bottom-0 z-0"
+              className="absolute left-64 bottom-0 z-0 "
               src="hero_head.svg"
               alt="" />
             <h1 className="text-8xl font-libra font-md relative z-10">

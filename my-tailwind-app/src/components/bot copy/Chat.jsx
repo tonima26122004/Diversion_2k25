@@ -155,7 +155,7 @@ const Chat = () => {
     async function getans() {
         setLoading(true);
         const response = await axios({
-            url: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyB2PIbL4OzhuqOoS-Agc-OL_JlUnxrw9Kg',
+            url: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCKBOU_k0d6FtK1vO4aSy99ydGLr5ZmzYc',
             method: 'post',
             data: {
                 "contents": [{
@@ -284,7 +284,7 @@ const Chat = () => {
                     </pre>
 
                     {/* Subscription Section */}
-                    <div className="absolute bottom-4 right-4 z-30">
+                    <div className="absolute bottom-4 right-4 z-30 hidden">
                         <Elements stripe={stripePromise}>
                             <CheckoutForm />
                         </Elements>
