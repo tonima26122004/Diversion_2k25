@@ -19,7 +19,7 @@ const Faq = () => {
         <img src="faq.svg" alt="" />
       </div>
 
-      <div className="card flex px-4 justify-between">
+      <div className="card flex px-4 justify-between items-center">
         <div className="w-3/5">
           <h1 className="text-xl font-bold font-libra mb-4">Popular Questions</h1>
           <ExpandableCard
@@ -93,20 +93,20 @@ const Faq = () => {
           </div>
         </div> */}
 
-        <div className='w-3/5 mx-10 mt-14 max-h-[40%]'>
+        <div className='w-[50%] mx-10  max-h-[40%]'>
         <div className='flex border-2 border-[#766C40] max-h-[100%] flex-col items-center'>
         <div><img src="ask.svg" alt="" /></div>
-        
+        <h1 className="text-center text-lg text-[#898880] font-semibold mt-5">You can ask anything you want to know about Feedback.</h1>
         <h1 className="text-center text-4xl font-semibold mt-5">Any Questions?</h1>
 
-        <div className="mt-5 w-full px-5">
+        <div className="mt-5 w-full px-5 mx-auto">
           <h2 className="text-lg font-semibold">Let me know.</h2>
           <input
             type="text"
             value={inputValue}
             onChange={handleInputChange}
             placeholder="Write here"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+            className="w-[80%] p-3 border mx-auto border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
           />
           <div className="flex justify-center my-5">
             <button
